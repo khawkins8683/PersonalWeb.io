@@ -1,0 +1,186 @@
+/*global defaults**/
+body{
+	color: white;
+	font-family: Arial;
+	background: url("./Images/background.jpg");
+	background-position:50% 50%;  /* Sets reference point to scale from */
+	background-size:cover; 
+	background-attachment: fixed;  
+	margin-left: 0;
+	text-align: center;
+	line-height:1.5;
+	font-size: 16px;
+}
+section{
+	width:80%;
+	margin: auto;
+}	
+h1{
+	font-size: 30px;
+}
+p{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;	
+}
+
+/* golbal footer **/
+footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+#footertxt{
+	float: right;
+	padding: 0;
+	margin: 0;
+}
+#footertxt li{	
+	list-style-type: none;
+	padding-right: 10px; 
+	text-align: right;
+}
+
+/*Golbal header**/
+header{
+	position:fixed;
+	background-color: black;
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+header h1{
+	padding-left:20px;
+}
+
+hr {
+  height: 4px;
+  margin: 0px 0;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0, 0, 0, 0)), color-stop(0.5, #333333), to(rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+  background: linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+  border: 0;
+}
+hr:after {
+  display: block;
+  content: '';
+  height: 30px;
+  background-image: -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 116, color-stop(0%, #cccccc), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -moz-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: radial-gradient(farthest-side at center top, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+}
+nav{
+	float:right;
+}
+nav a:link{
+	text-decoration:none;
+	color:white;
+}
+nav a:visited{
+	text-decoration:none;
+	color:white;
+}
+nav a:hover{
+	font-weight:bold;color:pink;
+}
+/**will call this the highlighted section**/
+.highlight{
+	font-size: 24px;
+	color:orange;
+}
+header h1{
+	float: left;
+	margin-bottom: 0;
+}
+header ul{
+	margin-left: 0px;
+	padding-left: 0;
+
+}
+header ul li{
+	display:inline;
+	padding-right: 10px; 
+}
+
+
+/**global container**/
+.container{
+	width:80%;
+	margin: auto;
+	background-color: black;
+}
+
+#interestpic{
+	width:100%;
+  	max-width:275px;
+}
+#mepic{
+	width:100%;
+  	max-width:275px;
+}
+#galoispic{
+	width:100%;
+  	max-width:275px;
+}
+
+#resumepic{
+	width:100%;
+  	max-width:500px;
+}
+
+.clearcontainer{
+	width:80%;
+	margin: auto;
+}
+
+
+.clearcontainer img{
+	width:100%;
+  	max-width:100px;
+}
+
+.box{
+	width:50%;
+	float: left;
+}
+
+.imageRow img{
+	max-height: 100px;
+	float: left;
+}
+
+
+
+.imageRow{
+	padding-bottom: 50px;
+	padding-top: 50px;
+	width:50%;
+	margin:auto;
+}
+
+table{
+	width:50%;
+	margin:auto;
+	text-align: left;
+	background-color: black;
+}
+
+.tutoringsection td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+.tutoringsection tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+#interestssection a{
+	color: white;
+	 text-decoration: none;
