@@ -1,4 +1,11 @@
-/*-----------global defaults---------------------**/
+
+
+
+
+
+/*-----------global defaults-----------------------------------------------------------------------------------**/
+/*-----------global defaults-----------------------------------------------------------------------------------**/
+/*-----------global defaults-----------------------------------------------------------------------------------**/
 body{
 	color: white;
 	font-family: Arial;
@@ -20,6 +27,34 @@ section{
 	width:960px;
 	margin: auto;
 }
+h1{
+	font-size: 30px;
+}
+p{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;	
+}
+
+table{
+	width:50%;
+	margin:auto;
+	text-align: left;
+	background-color: black;
+	border-radius: 25px;
+	padding: 25px;
+	opacity: .75;
+	z-index: -1;
+}
+
+
+/**will call this the highlighted section**/
+.highlight{
+	font-size: 24px;
+}
+
+/**-------- media readjustments ---- */
 
 @media only screen and (max-device-width: 960px){
 
@@ -30,6 +65,18 @@ section{
 
 	section{
 		width: 90%;
+	}
+
+	table{
+		width: 90%;
+	}
+
+	.highlight{
+		font-size: 70px;
+	}
+
+	.container{
+		border: 5px solid white;
 	}
 
 }
@@ -47,24 +94,18 @@ section{
 		width: 90%;
 	}
 
-}
+	table{
+		width: 90%;
+	}
 
-	
-h1{
-	font-size: 30px;
-}
-p{
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left: 20px;
-	padding-right: 20px;	
 }
 
 
+/* ------------------ golbal footer------------------------------------------------------------------------------ **/
+/* ------------------ golbal footer------------------------------------------------------------------------------ **/
+/* ------------------ golbal footer------------------------------------------------------------------------------ **/
+/* ------------------ golbal footer------------------------------------------------------------------------------ **/
 
-
-
-/* golbal footer **/
 footer{
 	position: fixed;
 	bottom: 0;
@@ -82,13 +123,18 @@ footer{
 	text-align: right;
 }
 
-/*Golbal header**/
+/*------------Golbal header   ------------------------------------------------------------------------------------------**/
+/*------------Golbal header   ------------------------------------------------------------------------------------------**/
+/*------------Golbal header   ------------------------------------------------------------------------------------------**/
+/*------------Golbal header   ------------------------------------------------------------------------------------------**/
+
 header{
 	position:fixed;
 	background-color: black;
 	width: 100%;
 	margin-left: 0;
 	margin-right: 0;
+	z-index: 1;
 }
 
 header h1{
@@ -105,7 +151,7 @@ header hr {
   background: linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
   border: 0;
 }
- hr:after {
+hr:after {
   display: block;
   content: '';
   height: 30px;
@@ -127,13 +173,10 @@ nav a:visited{
 	color:white;
 }
 nav a:hover{
-	font-weight:bold;color:pink;
+	color: red;
+	font-weight: bold;
 }
-/**will call this the highlighted section**/
-.highlight{
-	font-size: 24px;
-	color:orange;
-}
+
 header h1{
 	float: left;
 	margin-bottom: 0;
@@ -149,12 +192,66 @@ header ul li{
 }
 
 
+
+/**----------------Sections ------------------------------------------------------*/
+/**----------------Sections ------------------------------------------------------*/
+/**----------------Sections ------------------------------------------------------*/
+/**----------------Sections ------------------------------------------------------*/
+
+
 /**global container**/
 .container{
 	width:80%;
 	margin: auto;
 	background-color: black;
+	border-radius: 25px;
+	opacity: .75;
+	z-index: -1;
 }
+
+.clearcontainer{
+	width:80%;
+	margin: auto;
+}
+
+
+.clearcontainer img{
+	width:100%;
+  	max-width:100px;
+}
+
+
+
+.box{
+	width:50%;
+	float: left;
+}
+
+.imageRow{
+	padding-bottom: 50px;
+	padding-top: 50px;
+	width:50%;
+	margin:auto;
+}
+.imageRow img{
+	max-height: 100px;
+	float: left;
+}
+
+.tutoringsection td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+.tutoringsection tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+/* ------ ID specific css ----------------------------------------------------------------------------------------------------------  */
+/* ------ ID specific css ----------------------------------------------------------------------------------------------------------  */
+/* ------ ID specific css ----------------------------------------------------------------------------------------------------------  */
+/* ------ ID specific css ----------------------------------------------------------------------------------------------------------  */
 
 #interestpic{
 	width:100%;
@@ -174,52 +271,15 @@ header ul li{
   	max-width:500px;
 }
 
-.clearcontainer{
-	width:80%;
-	margin: auto;
-}
-
-
-.clearcontainer img{
-	width:100%;
-  	max-width:100px;
-}
-
-.box{
-	width:50%;
-	float: left;
-}
-
-.imageRow img{
-	max-height: 100px;
-	float: left;
-}
-
-
-
-.imageRow{
-	padding-bottom: 50px;
-	padding-top: 50px;
-	width:50%;
-	margin:auto;
-}
-
-table{
-	width:50%;
-	margin:auto;
-	text-align: left;
-	background-color: black;
-}
-
-.tutoringsection td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-.tutoringsection tr:nth-child(even) {
-    background-color: #dddddd;
-}
-
 #interestssection a{
 	color: white;
 	 text-decoration: none;
+}	 
+
+.imageRow a img{
+	opacity: 1.0;
+}
+
+.downloadim{
+	opacity: 1.0;
+}
