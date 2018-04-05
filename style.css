@@ -23,11 +23,27 @@ body{
 	background-attachment: fixed;  
 	background-repeat: no-repeat;
 	background-color: black;*/
+}@media (max-width: 960px){
+	body{
+		background-size: 100% auto;
+		background-position: center center;
+		background-attachment: fixed;  
+		background-repeat: no-repeat;	
+		background-color: black;
+	}
 }
+
 section{
 	width:960px;
 	margin: auto;
-}	
+}
+/** if small screen set width to auto  */
+@media (max-width: 960px){
+	section{
+		width: auto;
+	}
+}
+	
 h1{
 	font-size: 30px;
 }
