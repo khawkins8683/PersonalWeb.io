@@ -1,18 +1,31 @@
-/*global defaults**/
+/*-----------global defaults---------------------**/
 body{
 	color: white;
 	font-family: Arial;
-	background: url("./Images/background.jpg");
-	background-position:50% 50%;  /* Sets reference point to scale from */
-	background-size:cover; 
-	background-attachment: fixed;  
-	margin-left: 0;
+	font-size: 16px;
 	text-align: center;
 	line-height:1.5;
-	font-size: 16px;
+	margin-left: 0;
+	/** background image */
+	background: url("./Images/background.jpg");
+
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	
+	background-attachment: fixed;
+	background-position: center center; 
+	
+	/** background Style 1*/
+	/**background-position: 0% 40%;  
+	background-size: 100% auto;
+	background-attachment: fixed;  
+	background-repeat: no-repeat;
+	background-color: black;*/
 }
 section{
-	width:80%;
+	width:960px;
 	margin: auto;
 }	
 h1{
@@ -24,6 +37,10 @@ p{
 	padding-left: 20px;
 	padding-right: 20px;	
 }
+
+
+
+
 
 /* golbal footer **/
 footer{
