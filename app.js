@@ -1,3 +1,17 @@
+function btnOpacityOn(){
+    document.getElementById("backtotopbtn").style.opacity = ".75";
+    document.getElementById("contactinfo").style.opacity = "1.0";
+}
+
+function btnOpacityOff(){
+    document.getElementById("backtotopbtn").style.opacity = "0";
+    document.getElementById("contactinfo").style.opacity = "0.3";
+}
+
+
+
+
+
 // get the starting height value for each section
 var abtTop = $("#aboutmesection").offset().top;
 var interTop = $('#tutoringsection').offset().top;

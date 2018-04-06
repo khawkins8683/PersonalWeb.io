@@ -1,8 +1,4 @@
 
-
-
-
-
 /*-----------global defaults-----------------------------------------------------------------------------------**/
 /*-----------global defaults-----------------------------------------------------------------------------------**/
 /*-----------global defaults-----------------------------------------------------------------------------------**/
@@ -24,10 +20,10 @@ body{
 }
 
 section{
-	width:960px;
+	width:100%;
 	margin: auto;
 }
-h1{
+section  h1{
 	font-size: 30px;
 }
 p{
@@ -44,10 +40,14 @@ table{
 	background-color: black;
 	border-radius: 25px;
 	padding: 25px;
-	opacity: .75;
-	z-index: -1;
+	
 }
 
+/**global container**/
+.wrapper{
+	width:960px;
+	margin: auto;
+}
 
 /**will call this the highlighted section**/
 .highlight{
@@ -110,17 +110,45 @@ footer{
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+	z-index: 1;
 }
 
-#footertxt{
+footer a{
+	text-decoration: none;
+	color: white;
+	padding: 20px;
+	font-size: 20px;
+}
+footer a:hover{
+	font-weight: bold;
+	color: purple;
+}
+
+footer ul{
 	float: right;
+	width: 50%;
 	padding: 0;
 	margin: 0;
+	opacity: 0.3;
 }
-#footertxt li{	
+footer ul li{	
 	list-style-type: none;
 	padding-right: 10px; 
 	text-align: right;
+}
+
+footer div{
+	float: right;
+	height: 50px;
+	width: 50px;
+	background-color: red;
+	border-radius: 50%;
+	opacity: 0.0;
+}
+
+footer div a{
+	position: relative;
+	top:15px;
 }
 
 /*------------Golbal header   ------------------------------------------------------------------------------------------**/
@@ -199,18 +227,15 @@ header ul li{
 /**----------------Sections ------------------------------------------------------*/
 
 
-/**global container**/
+
+
 .container{
-	width:80%;
-	margin: auto;
 	background-color: black;
 	border-radius: 25px;
-	opacity: .75;
-	z-index: -1;
+	opacity: 0.5;
 }
 
 .clearcontainer{
-	width:80%;
 	margin: auto;
 }
 
@@ -219,8 +244,6 @@ header ul li{
 	width:100%;
   	max-width:100px;
 }
-
-
 
 .box{
 	width:50%;
@@ -239,12 +262,9 @@ header ul li{
 }
 
 .tutoringsection td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid white;
     text-align: left;
     padding: 8px;
-}
-.tutoringsection tr:nth-child(even) {
-    background-color: #dddddd;
 }
 
 
@@ -273,13 +293,5 @@ header ul li{
 
 #interestssection a{
 	color: white;
-	 text-decoration: none;
+	text-decoration: none;
 }	 
-
-.imageRow a img{
-	opacity: 1.0;
-}
-
-.downloadim{
-	opacity: 1.0;
-}
