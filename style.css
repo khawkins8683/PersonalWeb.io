@@ -295,13 +295,13 @@ nav a:hover{
 
 
 #meintpicsec{
-	float: left;
+	float: right;
 	width: 40%;
 }
 
 #meintoverview{
 	margin-top: 100px;
-	float: left;
+	float: right;
 	width: 60%;
 }
 
