@@ -235,14 +235,22 @@ header ul li{
 	opacity: 0.5;
 }
 
-.clearcontainer{
-	margin: auto;
-}
 
 
 .clearcontainer img{
 	width:100%;
   	max-width:100px;
+}
+
+
+
+.measide{
+	float: left;
+	width:50%;
+}
+.container.floatingct{
+	float: left;
+	width: 50%;
 }
 
 .box{
