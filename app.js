@@ -14,6 +14,7 @@ function btnOpacityOff(){
 function frameOn(idInput){
     document.getElementById(idInput).style.border = "3px solid white";
 }
+
 function frameOff(idInput){
     document.getElementById(idInput).style.border = "none";
 }
