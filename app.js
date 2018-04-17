@@ -58,8 +58,6 @@ function nextPicAboutMe() {
 }
 
 
-
-
 var picIntList = [
     "meIntSki.png",
     "meIntBackFlip.jpg",
@@ -90,46 +88,70 @@ function nextPicInterests() {
 }
 
 
-
-
 // get the starting height value for each section
 var offSetMove= -200;
-var abtTop = $("#aboutmesection").offset().top + offSetMove;
-var interTop = $('#tutoringsection').offset().top+ offSetMove;
-var resTop = $('#resumesection').offset().top+ offSetMove;
-var downTop = $('#downloadsection').offset().top+ offSetMove;
-//alert([abtBot,interBot,resBot,downBot]);
+var abtTop = document.getElementById("aboutmesection").offsetTop + offSetMove;
+var tutTop =  document.getElementById("tutoringsection").offsetTop + offSetMove;
+var resTop =  document.getElementById("resumesection").offsetTop + offSetMove;
+var downTop =  document.getElementById("downloadsection").offsetTop + offSetMove;
 
-// have the nav menu track the scrolling
-$(window).on('scroll',function(){
+function setTextByID(size, idArray ){
+    for(var i = 0; i < idArray.length; i++){
+        document.getElementById(idArray[i]).style.fontSize = size + "px";
+    }
+}
+
+//now set the windows on scrole event
+window.addEventListener('scroll', function(){
 
     // we round here to reduce a little workload
-    var current = Math.round($(window).scrollTop());
+    var current = Math.round(this.scrollY);
 
     //add class to nav item if scroll bar is in each section
+    switch(true){
+        case ((current > 0)&&(tutTop > current)):
+            setTextByID(24, ["navAboutMe"] );
+            setTextByID(17, ["navTutoring","navResume","navDownloads"] );
+            break;
 
-    if ((current > 0)&&(interTop > current)) {
-        $("#navAboutMe").addClass("highlight");
-    } else{
-    	$("#navAboutMe").removeClass("highlight");
+        case ((current > tutTop)&&(resTop > current)):
+            setTextByID(24, ["navTutoring"] );
+            setTextByID(17, ["navAboutMe","navResume","navDownloads"] );        
+            break; 
+
+        case  ((current > resTop)&&(downTop > current)):   
+            setTextByID(24, ["navResume"] );
+            setTextByID(17, ["navAboutMe","navTutoring","navDownloads"] );
+            document.getElementById("navResume").style.fontSize = "24px";
+            break; 
+
+        case (current > downTop):
+            setTextByID(24, ["navDownloads"] );
+            setTextByID(17, ["navAboutMe","navTutoring","navResume"] );
+            break;           
     }
+});    
+    // if ((current > 0)&&(interTop > current)) {
+    //     $("#navAboutMe").addClass("highlight");
+    // } else{
+    // 	$("#navAboutMe").removeClass("highlight");
+    // }
 
-    if ((current > interTop)&&(resTop > current)) {
-        $("#navTutoring").addClass("highlight");
-    } else{
-    	$("#navTutoring").removeClass("highlight");
-    }
+    // if ((current > interTop)&&(resTop > current)) {
+    //     $("#navTutoring").addClass("highlight");
+    // } else{
+    // 	$("#navTutoring").removeClass("highlight");
+    // }
 
-    if ((current > resTop)&&(downTop > current)) {
-        $("#navResume").addClass("highlight");
-    } else{
-    	$("#navResume").removeClass("highlight");
-    }
+    // if ((current > resTop)&&(downTop > current)) {
+    //     $("#navResume").addClass("highlight");
+    // } else{
+    // 	$("#navResume").removeClass("highlight");
+    // }
 
-    if (current > downTop) {
-        $("#navDownloads").addClass("highlight");
-    } else{
-    	$("#navDownloads").removeClass("highlight");
-    }
+    // if (current > downTop) {
+    //     $("#navDownloads").addClass("highlight");
+    // } else{
+    // 	$("#navDownloads").removeClass("highlight");
+    // }
 
-});
