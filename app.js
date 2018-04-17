@@ -1,5 +1,4 @@
 
-
 function btnOpacityOn(){
     document.getElementById("backtotopbtn").style.opacity = ".75";
     document.getElementById("contactinfo").style.opacity = "1.0";
@@ -11,12 +10,16 @@ function btnOpacityOff(){
 }
 
 
-function frameOn(idInput){
-    document.getElementById(idInput).style.border = "3px solid white";
+function frameOn(){
+    for(var i = 0; i<arguments.length; i++){    
+        document.getElementById(arguments[i]).style.border = "3px solid white";
+    }    
 }
 
-function frameOff(idInput){
-    document.getElementById(idInput).style.border = "none";
+function frameOff(){
+    for(var i = 0; i<arguments.length; i++){    
+        document.getElementById(arguments[i]).style.border = "none";
+    }    
 }
 
 var picMeList = [

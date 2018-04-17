@@ -11,16 +11,22 @@ body{
 	margin-left: 0;
 	/** background image */
 	background: url("./Images/background.jpg");
-	background-size: cover;
+	background-position: center center;
+	background-size: cover; 
+	/** set cover method for multiple browser types */
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-attachment: fixed;
-	background-position: center center; 
+	
 }
-
+/**global container**/
+.wrapper{
+	width:960px;/** set main widith to 960 px*/
+	margin: auto;
+}
 section{
-	width:100%;
+	width:100%;/**have sections cover full container*/
 	margin: auto;
 }
 section  h1{
@@ -44,13 +50,9 @@ table{
 	
 }
 
-/**global container**/
-.wrapper{
-	width:960px;
-	margin: auto;
-}
 
-/**will call this the highlighted section**/
+
+/**set current section in nav bar styling**/
 .highlight{
 	font-size: 24px;
 }
