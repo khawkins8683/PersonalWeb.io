@@ -1,4 +1,4 @@
-
+//footer functions
 function btnOpacityOn(){
     document.getElementById("backtotopbtn").style.opacity = ".75";
     document.getElementById("contactinfo").style.opacity = "1.0";
@@ -8,85 +8,6 @@ function btnOpacityOff(){
     document.getElementById("backtotopbtn").style.opacity = "0";
     document.getElementById("contactinfo").style.opacity = "0.3";
 }
-
-
-function frameOn(){
-    for(var i = 0; i<arguments.length; i++){    
-        document.getElementById(arguments[i]).style.border = "3px solid white";
-    }    
-}
-
-function frameOff(){
-    for(var i = 0; i<arguments.length; i++){    
-        document.getElementById(arguments[i]).style.border = "none";
-    }    
-}
-
-var picMeList = [
-    "me.jpg",
-    "meBackFlip.jpg",
-    "meTree.jpg",
-    "meRome.jpg",
-    "meGraduate.jpg",
-    "meAntCanyon.jpg",
-    "meAfro.jpg"
-];
-var picMeText=[
-    "Me happy!",
-    "Me flipping!",
-    "Me stuck on tree!",
-    "Me in Rome!",
-    "Me surviving!",
-    "Me Arizonaing!",
-    "Me in High School!"
-];
-
-var picMeIndex = 1;
-
-function nextPicAboutMe() {
-
-    var picText = document.getElementById("metext");
-    var pic = document.getElementById("mepic");
-
-    picText.innerHTML = picMeText[picMeIndex];
-    pic.setAttribute("src","./Images/"+picMeList[picMeIndex]);
-
-    picMeIndex++;
-    if(picMeIndex > (picMeList.length-1) ){ picMeIndex=0; }
-    
-
-}
-
-
-var picIntList = [
-    "meIntSki.png",
-    "meIntBackFlip.jpg",
-    "meIntPaint.jpg",
-    "meIntClimb.jpg"
-];
-var picIntText=[
-    "Cat skiing with my Dad in Steamboat Springs, Co.",
-    "Trampolines were my childhood. This was a bouncy one at a carnival in Italy.",
-    "I like to paint.  When I studied abroad in Itally I took Art:275 (water colors)",
-    "Climbing is one of the best things to do in Tucson.  When it is hot, we climb at a cooler 9,000 ft elevation at the top of Mt. Lemmon"
-];
-
-var picIntIndex = 1;
-
-function nextPicInterests() {
-
-    var picText = document.getElementById("inttext");
-    var pic = document.getElementById("interestpic");
-
-    picText.innerHTML = picIntText[picIntIndex];
-    pic.setAttribute("src","./Images/"+picIntList[picIntIndex]);
-
-    picIntIndex++;
-    if(picIntIndex > (picIntList.length-1) ){ picIntIndex=0; }
-    
-
-}
-
 
 // get the starting height value for each section
 var offSetMove= -200;
@@ -130,28 +51,139 @@ window.addEventListener('scroll', function(){
             setTextByID(17, ["navAboutMe","navTutoring","navResume"] );
             break;           
     }
-});    
-    // if ((current > 0)&&(interTop > current)) {
-    //     $("#navAboutMe").addClass("highlight");
-    // } else{
-    // 	$("#navAboutMe").removeClass("highlight");
-    // }
+}); 
 
-    // if ((current > interTop)&&(resTop > current)) {
-    //     $("#navTutoring").addClass("highlight");
-    // } else{
-    // 	$("#navTutoring").removeClass("highlight");
-    // }
 
-    // if ((current > resTop)&&(downTop > current)) {
-    //     $("#navResume").addClass("highlight");
-    // } else{
-    // 	$("#navResume").removeClass("highlight");
-    // }
+function newSlideShow(imageID, fileList,captionList){
 
-    // if (current > downTop) {
-    //     $("#navDownloads").addClass("highlight");
-    // } else{
-    // 	$("#navDownloads").removeClass("highlight");
-    // }
+    var self = {
+        slideShowId: imageID,
+        picIndex: 1,
+        imageList: fileList,
+        captions: captionList,
 
+        getImageElement: function(){
+            //console.log("getting ID: "+self.slideShowId);
+            return document.getElementById(self.slideShowId);
+        },
+        getTextElement: function(){
+            //console.log("getting ID: "+self.slideShowId);
+            return document.getElementById(self.slideShowId+"text");
+        },
+        getForwardArrow: function(){
+            var slideShowCont =document.getElementById(self.slideShowId).parentNode;
+            return slideShowCont.getElementsByClassName('forwardArrow')[0];;
+        },
+        getBackArrow: function(){
+            var slideShowCont =document.getElementById(self.slideShowId).parentNode;
+            return slideShowCont.getElementsByClassName('backArrow')[0];;
+        },        
+        imageFrame: function(){
+            self.getImageElement().style.border = "3px solid white"; 
+        },
+        removeImageFrame: function(){
+            self.getImageElement().style.border = "none"; 
+        },
+        colorForwardArrow: function(color){
+            var arrow = self.getForwardArrow();
+            arrow.getElementsByClassName('pointer')[0].style.backgroundColor = color;
+        },
+        colorBackArrow: function(color){
+            var arrow = self.getBackArrow();
+            arrow.getElementsByClassName('pointer')[0].style.backgroundColor = color;
+        },        
+        nextPic:function(){
+            //get pic + text elements
+            
+            var pic = self.getImageElement();
+            var picText = self.getTextElement();
+
+            // console.log(self,pic,picText);
+            //set them to new values
+            picText.innerHTML = self.captions[ self.picIndex  ];
+            pic.setAttribute("src","./Images/" + self.imageList[ self.picIndex ]);
+            //bump up counter index and reset if needed
+            self.picIndex++;
+            if(self.picIndex > (self.imageList.length-1) ){ self.picIndex = 0; };    
+        },  
+        previousPic: function(){
+            if(self.picIndex == 0 ){ 
+                self.picIndex = (self.imageList.length-1)
+            }else{
+                self.picIndex--;
+            }
+            var pic = self.getImageElement();
+            var picText = self.getTextElement();
+            //set them to new values
+            picText.innerHTML = self.captions[ self.picIndex  ];
+            pic.setAttribute("src","./Images/"+self.imageList[ self.picIndex ]);
+        }
+
+    };
+
+    //add the event listeners Image
+    self.getImageElement().addEventListener("mouseover", self.imageFrame);
+    self.getImageElement().addEventListener("mouseout", self.removeImageFrame);
+
+    self.getImageElement().addEventListener("mouseover", function(){ self.colorForwardArrow("blue");  });
+    self.getImageElement().addEventListener("mouseout", function(){ self.colorForwardArrow("red");  });
+
+    self.getImageElement().addEventListener("click", self.nextPic);
+
+    //Forward Arrow
+    self.getForwardArrow().addEventListener("mouseover", self.imageFrame);
+    self.getForwardArrow().addEventListener("mouseout", self.removeImageFrame);
+
+    self.getForwardArrow().addEventListener("mouseover", function(){ self.colorForwardArrow("blue");  });
+    self.getForwardArrow().addEventListener("mouseout", function(){ self.colorForwardArrow("red");  });
+
+    self.getForwardArrow().addEventListener("click", self.nextPic);
+
+    //Back Arrow
+    self.getBackArrow().addEventListener("mouseover", self.imageFrame);
+    self.getBackArrow().addEventListener("mouseout", self.removeImageFrame);
+
+    self.getBackArrow().addEventListener("mouseover", function(){ self.colorBackArrow("blue");  });
+    self.getBackArrow().addEventListener("mouseout", function(){ self.colorBackArrow("red");  });
+
+
+    self.getBackArrow().addEventListener("click", self.previousPic);
+
+    return self;
+}
+
+var picMeList = [
+    "me.jpg",
+    "meBackFlip.jpg",
+    "meTree.jpg",
+    "meRome.jpg",
+    "meGraduate.jpg",
+    "meAntCanyon.jpg",
+    "meAfro.jpg"
+];
+var picMeText=[
+    "Me happy!",
+    "Me flipping!",
+    "Me stuck on tree!",
+    "Me in Rome!",
+    "Me surviving!",
+    "Me Arizonaing!",
+    "Me in High School!"
+];
+
+var mePicSlideShow = newSlideShow('mepic', picMeList, picMeText);
+
+var picIntList = [
+    "meIntSki.png",
+    "meIntBackFlip.jpg",
+    "meIntPaint.jpg",
+    "meIntClimb.jpg"
+];
+var picIntText=[
+    "Cat skiing with my Dad in Steamboat Springs, Co.",
+    "Trampolines were my childhood. This was a bouncy one at a carnival in Italy.",
+    "I like to paint.  When I studied abroad in Itally I took Art:275 (water colors)",
+    "Climbing is one of the best things to do in Tucson.  When it is hot, we climb at a cooler 9,000 ft elevation at the top of Mt. Lemmon"
+];
+
+var intPicSlideShow = newSlideShow('intpic', picIntList, picIntText);

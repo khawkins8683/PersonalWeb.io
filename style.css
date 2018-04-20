@@ -293,7 +293,7 @@ nav a:hover{
 }
 .slideshowfooter {
 	margin: auto;
-	width: 75%;
+	width: 70%;
 	height: 100%;
 }
 
@@ -304,6 +304,7 @@ nav a:hover{
 
 .forwardArrow, .backArrow {
 	width: 10%;
+	margin-right: 0px;
 
 }
 
@@ -325,12 +326,13 @@ nav a:hover{
 }
 
 .slideshowtext{
-	width:80%;
+	width:73%;
 	text-align: center;
 }
 
 .slideshowtext p{
 	padding: 0px;
+	text-align: center;
 }
 
 
@@ -344,7 +346,7 @@ nav a:hover{
 /* ------ ID specific css ----------------------------------------------------------------------------------------------------------  */
 /* ------ ID specific css ----------------------------------------------------------------------------------------------------------  */
 
-#interestpic{
+#intpic{
 	width:100%;
   	max-width:275px;
 }
