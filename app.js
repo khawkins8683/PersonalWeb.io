@@ -72,11 +72,11 @@ function newSlideShow(imageID, fileList,captionList){
         },
         getForwardArrow: function(){
             var slideShowCont =document.getElementById(self.slideShowId).parentNode;
-            return slideShowCont.getElementsByClassName('forwardArrow')[0];;
+            return slideShowCont.getElementsByClassName('forwardArrow')[0];
         },
         getBackArrow: function(){
             var slideShowCont =document.getElementById(self.slideShowId).parentNode;
-            return slideShowCont.getElementsByClassName('backArrow')[0];;
+            return slideShowCont.getElementsByClassName('backArrow')[0];
         },        
         imageFrame: function(){
             self.getImageElement().style.border = "3px solid white"; 
