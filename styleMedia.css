@@ -1,0 +1,101 @@
+
+/**-------- media readjustments ---- */
+/**cell phone*/
+@media only screen and (max-device-width: 960px){
+
+	body{
+		background: red;
+		font-size: 50px;
+	}
+
+	section{
+		width: 90%;
+	}
+
+	table{
+		width: 90%;
+	}
+
+	.highlight{
+		font-size: 70px;
+	}
+
+	.container{
+		border: 5px solid white;
+	}
+
+	/*remove all floats + adjust widths*/
+/*	.mecontainer{
+		margin: auto;
+		width: 100%;
+	}*/
+	.measide{
+		float: none;
+		width:100%;
+	}
+	.container.floatingct{
+		float: none;
+		width:100%;
+	}
+	.box{
+		width:90%;
+		float: none;
+	}
+	#meintpicsec{
+		float: none;
+		width:90%;
+	}
+	.imageRow img{
+		/*float: none;*/
+		width:30%;
+	}
+	#meintpicsec{
+		float: none;
+		width:90%;
+	}
+	#meintoverview{
+		float: none;
+		width:100%;
+	}
+	/*Adjust heights*/
+	#tutoringsection{
+		height: 4000px
+	} 
+	#resumesection{
+		height: 4000px
+	} 
+	#downloadsection{
+		height: 4000px;
+	}
+	#aboutmesection{
+		padding-top: 200px;
+		height: 2200px;
+	}
+	#interestssection{
+		height: 10000px;
+	}
+
+
+}
+/*@media (max-width: 960px){
+
+	body{
+		background-size: 100% auto;
+		background-position: center center;
+		background-attachment: fixed;  
+		background-repeat: no-repeat;	
+		background-color: black;
+	}
+
+	section{
+		width: 90%;
+	}
+
+	table{
+		width: 90%;
+	}
+
+}*/
+
+
+

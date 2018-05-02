@@ -59,51 +59,6 @@ table{
 
 /**-------- media readjustments ---- */
 
-@media only screen and (max-device-width: 960px){
-
-	body{
-		background: black;
-		font-size: 50px;
-	}
-
-	section{
-		width: 90%;
-	}
-
-	table{
-		width: 90%;
-	}
-
-	.highlight{
-		font-size: 70px;
-	}
-
-	.container{
-		border: 5px solid white;
-	}
-
-}
-@media (max-width: 960px){
-
-	body{
-		background-size: 100% auto;
-		background-position: center center;
-		background-attachment: fixed;  
-		background-repeat: no-repeat;	
-		background-color: black;
-	}
-
-	section{
-		width: 90%;
-	}
-
-	table{
-		width: 90%;
-	}
-
-}
-
-
 /* ------------------ golbal footer------------------------------------------------------------------------------ **/
 /* ------------------ golbal footer------------------------------------------------------------------------------ **/
 /* ------------------ golbal footer------------------------------------------------------------------------------ **/
