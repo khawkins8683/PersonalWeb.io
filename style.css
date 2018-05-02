@@ -356,7 +356,11 @@ nav a:hover{
 	float: right;
 	width: 40%;
 }
-
+#intpictext{
+	font-size: 12px;
+	margin-left: 12px;
+	margin-right: 12px;
+}
 #meintoverview{
 	margin-top: 100px;
 	float: right;
