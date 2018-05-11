@@ -120,35 +120,14 @@ function newSlideShow(imageID, fileList,captionList){
         },
         buildFooter: function(){
             var slcontainer = document.getElementById(self.slideShowId).parentNode;
-            var text = slcontainer.getElementsByTagName("P")[0].valueOf().innerHTML;
-            slcontainer.getElementsByTagName("P")[0].remove();
-
-            var footer = document.createElement("div");
-            footer.setAttribute("class", "slideshowfooter"); // and make sure myclass has some styles in css
-            
-            var forward = document.createElement("div");
-            forward.setAttribute("class", "forwardArrow");
-            forward.innerHTML = '<div class="pointer"><p> > </p></div>';
-
-            var backward = document.createElement("div");
-            backward.setAttribute("class", "backArrow");
-            backward.innerHTML = '<div class="pointer"><p> < </p></div>';
-
-            var sltext = document.createElement("div");
-            sltext.setAttribute("class", "slideshowtext"); 
-            sltext.innerHTML = "<p "+"id='"+self.slideShowId+"text'>"+ text +"</p>";
-
-            footer.appendChild(backward);
-            footer.appendChild(sltext);
-            footer.appendChild(forward);
-            slcontainer.appendChild(footer);
+            return slcontainer;
         }
 
     };
 
     //now add in the html constructor
     //Find the p section and replace with the slide show footer
-    self.buildFooter();
+
     //add the event listeners Image
     self.getImageElement().addEventListener("mouseover", self.imageFrame);
     self.getImageElement().addEventListener("mouseout", self.removeImageFrame);

@@ -8,6 +8,8 @@
 	<title>K-Hawk</title>
 	<link rel="stylesheet" type="text/css" href="styleGlobal.css">
 	<link rel="stylesheet" type="text/css" href="styleMedia.css">
+	<link rel="stylesheet" type="text/css" href="styleSections.css">
+	<link rel="stylesheet" type="text/css" href="styleSlideShow.css">
 	<!-- responsive web page -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -39,46 +41,31 @@
 			<li>Email: ksolohawk@gmail.com</li>
 		</ul>	
 
-		<div id="backtotopbtn"><a href="#gotoTop">^</a></div>
+		<div id="backtotopbtn">
+			<a href="#gotoTop">^</a>
+		</div>
 
 	</footer>
 <!-- hyper link for back to top arrow -->
 <a id="gotoTop"></a>
-<!-- Main Body -->
-<div class="wrapper"  onscroll="frameOn('mepic','interestpic')">	
+<!-- Main Body should be 960 px and centered -->
+<div class="wrapper">	
 
 <!-- About me -->
+	<!-- section should be 100% wide -->
 	<section id = "aboutmesection">
 		<h1><a id="gotoAboutMe"></a>About Me</h1>	
-		<div class="mecontainer">
+		<!-- <div class="mecontainer"> -->
 
 			<div class="measide">
-
 				<div class = "slideshowcontainer">
-
 					<img id="mepic" src="./Images/me.jpg">
-					
-					<div class="slideshowfooter">
-
-						<div class="backArrow">
-							<div class="pointer"><p> < </p></div>
-						</div>
-
-						<div class = "slideshowtext">
-							<p id="mepictext">Me happy!</p>
-						</div>
-
-						<div class="forwardArrow">
-							<div class="pointer"><p> > </p></div>
-						</div>	
-
-					</div>	
-
+					<p>Me happy!!!!!!</p>
 				</div>
 			</div>	
 
 
-			<div class="container floatingct">
+			<div class="txtcontainer">
 				<p>
 				I am Kyle Hawkins from Boulder, Colorado. I grew up in a culture that appreciated the outdoors and physics.  As I grew up I embraced both personally.  That and a yearn for a new environment led me to the University of Arizona, were I fell in love with Tucson.  Nearby Mount Lemmon offers 6 unique climate zones, so if you ever don't have enough time to drive the 1,000+ miles up the west coast, just do the 30 up Lemmon instead.  
 				<br />
@@ -86,7 +73,8 @@
 				I also do math tutoring for calculus in the Tucson area.  See the tutoring section of this page for more information.
 				</p>
 			</div>
-		</div>
+
+		<!-- </div> -->
 	</section>
 
 
@@ -94,45 +82,30 @@
 <!-- Interests -->
 	<section id="interestssection">
 	
-		<div id="meintpicsec">
-			<h1><a id="gotoInterests"></a>Interests</h1>
+		<div id= "inttop">
 
-			<div class = "slideshowcontainer">
-				<img id="intpic" src="./Images/meIntSki.png">
-				
-				<div class="slideshowfooter">
-					<div class="backArrow">
-						<div class="pointer"><p> < </p></div>
-					</div>
-
-					<div class = "slideshowtext">
-						<p id="intpictext">Cat skiing with my Dad in Steamboat Springs, Co.</p>
-					</div>
-
-					<div class="forwardArrow">
-						<div class="pointer"><p> > </p></div>
-					</div>	
-				</div>	
-
-			</div>
-<!-- 			
-				<img id="interestpic" src="./Images/meIntSki.png"  onmouseout="frameOff('interestpic');" onmouseover="frameOn('interestpic');" onclick="nextPicInterests();">
-				<figcaption id="inttext">
-					Cat skiing with my Dad in Steamboat Springs, Co.
-				</figcaption> -->
-		</div>	
-
-		<div class="container" id="meintoverview">			
+		<div class="txtcontainer" id = "inttxt1">			
 			<p>
 			Being fortunate enough to come from a middle-class income in the west I get to ski, snowboard, hike, and rock climb.  I also like things like programming, math history and chess.  It's a fun mix.
 			</p>
 		</div>
-			
-		<h2>Best Math Story</h2>
-		<a href="https://en.wikipedia.org/wiki/Group_theory"><img src="./Images/galois.jpg" id="galoispic"></a>
-		<figcaption>Galois, pronounced gow-wa (French)</figcaption>
 
-		<div class="container">	
+		<div id="meintpicsec">
+			<h1><a id="gotoInterests"></a>Interests</h1>
+			<div class = "slideshowcontainer">
+				<img id="intpic" src="./Images/meIntSki.png">
+				<p >Cat skiing with my Dad in Steamboat Springs, Co.</p>
+			</div>
+		</div>	
+		
+		<div id = "mathstorysec">	
+			<h2>Best Math Story</h2>
+			<a href="https://en.wikipedia.org/wiki/Group_theory"><img src="./Images/galois.jpg" id="galoispic"></a>
+			<p>Galois, pronounced gow-wa (French)</p>
+		</div>
+
+		</div>
+		<div class="txtcontainer">	
 			<p>
 			Evariste Galois was born near Paris, France in 1811, and is considered one of the greatest mathematicians of the 19th century, even though he only lived to be 20 years old. He is accredited with initially developing "Galois" Theory and Group Theory.  The <a href="https://en.wikipedia.org/wiki/Standard_Model">Standard Model </a>(the so to speak "periodic table of physics"), is an application of Group Theory in physics.
 			<br />
@@ -155,19 +128,24 @@
 		</div>	
 
 		<h2>Honorable Mentions</h2>
-		<div class="clearcontainer">
+		<div>
 		
 			<div class="box">
 				<a href="https://en.wikipedia.org/wiki/Emmy_Noether"><img src="./Images/noether.jpg" id="smallpic"></a>
-				<h3><a href="https://en.wikipedia.org/wiki/Emmy_Noether">Emma Noether<a/></h3>
+				<h3><a href="https://en.wikipedia.org/wiki/Emmy_Noether">Emma Noether</a></h3>
 				<p>When asked whether Noether was a great female mathematician Edmund Landau Said: "I can testify that she is a great mathematician, but that she is a woman, I cannot swear."
 				</p>
-
 			</div>
 
 			<div class="box">
-				<a href="https://en.wikipedia.org/wiki/Archimedes"><img src="./Images/archimedes.jpg" calss="smallpic"></a>
-				<h3><a href="https://en.wikipedia.org/wiki/Archimedes">Archimedes<a/></h3>
+				<a href="https://en.wikipedia.org/wiki/Archimedes">
+					<img src="./Images/archimedes.jpg" calss="smallpic">
+				</a>
+				<h3>
+					<a href="https://en.wikipedia.org/wiki/Archimedes">
+						Archimedes
+					</a>
+				</h3>
 				<p>His death is perhaps the most famous of all.</p>
 			</div>
 		</div>	
@@ -255,7 +233,7 @@
 <!-- Downloads -->
 	<section id="downloadsection">
 		<h1><a id="gotoDownloads"></a>Downloads</h1>
-		<div class="container">
+		<div class="txtcontainer">
 			<div class="imageRow">
 				<a href="./Downloads/Resume_Hawkins.pdf" download>
 					<img src="./Images/resume_clip_art.png" class="downloadim">

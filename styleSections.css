@@ -1,0 +1,179 @@
+/* ------------------ golbal footer------------------------------------------------------------------------------ **/
+/* ------------------ golbal footer------------------------------------------------------------------------------ **/
+/* ------------------ golbal footer------------------------------------------------------------------------------ **/
+/* ------------------ golbal footer------------------------------------------------------------------------------ **/
+footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 1;
+}
+/*Styling for back to top arrow*/
+footer div{
+	margin: 0px auto;
+	height: 50px;
+	width: 50px;
+	background-color: blue;
+	border-radius: 50%;
+	opacity: 0.0;
+}
+footer div a{
+	position: relative;
+	font-size: 2em;
+	font-weight: bold;
+	padding-left: 17px;
+}
+footer ul{
+	float: right;
+	opacity: 0.3;
+	text-align: right;
+}
+
+/*------------Golbal header   ------------------------------------------------------------------------------------------**/
+/*------------Golbal header   ------------------------------------------------------------------------------------------**/
+/*------------Golbal header   ------------------------------------------------------------------------------------------**/
+/*------------Golbal header   ------------------------------------------------------------------------------------------**/
+header{
+	opacity: 0.75;
+	position:fixed;
+	width: 100%;
+	z-index: 1;
+	/*top: 0px;*/
+}
+header div{
+	height: 75px;
+	background-color: black;
+	
+}
+header h1{
+	width: 48%;
+	float: left;
+	text-align: left;
+	padding-left: 2%;
+}
+header nav{
+	width: 50%;
+	float: right;
+	text-align: right;
+	padding-top: 20px;
+}
+header ul li{
+	display:inline;
+	padding-right: 10px; 
+}
+header a{
+	color: white;
+}
+/**------------Body-------------------------------------------------------------------**/
+/**------------Body-------------------------------------------------------------------**/
+/**------------Body-------------------------------------------------------------------**/
+/**------------Body-------------------------------------------------------------------**/
+.wrapper{
+	width:960px;/** set main widith to 960 px*/
+	margin: 0 auto;
+	z-index: 0;
+}
+.txtcontainer{
+	background-color: black;
+	border-radius: 25px;
+	opacity: 0.68;
+	padding: 3%;
+}
+/*honorable mentions for math story*/
+.box{
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.box img{
+	max-height: 350px;
+}
+
+/*download/resume boxes*/
+.imageRow{
+	padding-bottom: 50px;
+	padding-top: 50px;
+	width: 50%;
+	margin :auto;
+}
+.imageRow p{
+	margin-top: 50px;
+}
+.imageRow img{
+	max-height: 100px;
+	float: left;
+}
+
+
+
+
+
+/**----------------------------------------Main Sections ----------------**/
+/*section sizing*/
+#aboutmesection{
+	padding-top: 200px;
+	height: 550px;
+}
+#interestssection{
+	height: 2500px;
+}
+#tutoringsection{
+	height: 1000px
+} 
+#resumesection{
+	height: 1000px
+} 
+#downloadsection{
+	height: 1000px;
+}
+
+
+
+/*specific to inner sections*/
+/*me*/
+.measide{
+	float: left;
+	width: 50%;
+}
+#aboutmesection .txtcontainer{
+	width: 44%;
+	float: left;
+}
+
+
+
+/*interests*/
+#meintpicsec{
+	float: right;
+	width: 50%;
+}
+#interestssection #inttxt1{
+	width: 44%;
+	float: left;
+}
+#mathstorysec{
+	float: left;
+	width: 30%;
+	text-align: center;
+	margin-bottom: 50px;
+}
+#inttop{
+	height: 750px;
+}
+/*tutoring*/
+#tutoringsection table{
+	width: 50%;
+	background: black;
+	margin: auto;
+	padding: 3%;
+	border-radius: 25px;
+}
+#tutoringsection td, th {
+    border: 1px solid white;
+    text-align: left;
+    padding: 8px;
+}
+#resumesection{
+	text-align: center;
+}
+

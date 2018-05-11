@@ -1,362 +1,53 @@
+body {
+	margin: 0;
+	padding: 0;
 
-/*-----------global defaults-----------------------------------------------------------------------------------**/
-/*-----------global defaults-----------------------------------------------------------------------------------**/
-/*-----------global defaults-----------------------------------------------------------------------------------**/
-body{
-	color: white;
-	font-family: Arial;
-	font-size: 17px;
-	text-align: center;
-	line-height:1.5;
-	margin-left: 0;
-	/** background image */
-	background: url("./Images/background.jpg");
+	font-size: 100%;
+
+	background-image: url("./Images/background.jpg");
+	background-attachment: fixed; 
 	background-position: center center;
-	background-size: cover; 
-	/** set cover method for multiple browser types */
+	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-attachment: fixed;
-	
-}
-/**global container**/
-.wrapper{
-	width:960px;/** set main widith to 960 px*/
-	margin: auto;
-}
-section{
-	width:100%;/**have sections cover full container*/
-	margin: auto;
-}
-section  h1{
-	font-size: 30px;
-}
-p{
-	text-align: left;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left: 20px;
-	padding-right: 20px;	
-}
 
-table{
-	width:50%;
-	margin:auto;
-	text-align: left;
-	background-color: black;
-	border-radius: 25px;
-	padding: 25px;
-	
-}
-
-
-
-/**set current section in nav bar styling**/
-.highlight{
-	font-size: 24px;
-}
-
-/**-------- media readjustments ---- */
-
-/* ------------------ golbal footer------------------------------------------------------------------------------ **/
-/* ------------------ golbal footer------------------------------------------------------------------------------ **/
-/* ------------------ golbal footer------------------------------------------------------------------------------ **/
-/* ------------------ golbal footer------------------------------------------------------------------------------ **/
-
-footer{
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	z-index: 1;
-}
-
-footer a{
-	text-decoration: none;
 	color: white;
-	padding: 20px;
-	font-size: 20px;
+	font-family: Arial;
+	line-height:1.5;
 }
-footer a:hover{
-	font-weight: bold;
-	color: purple;
-}
-
-footer ul{
-	float: right;
-	width: 50%;
-	padding: 0;
+/*default padding*/
+*{
 	margin: 0;
-	opacity: 0.3;
+	padding: 0;
 }
-footer ul li{	
-	list-style-type: none;
-	padding-right: 10px; 
-	text-align: right;
+/*text*/
+h1, h2, h3 {	text-align: center; }
+
+h1{
+	font-size: 3em;
 }
-
-footer div{
-	float: right;
-	height: 50px;
-	width: 50px;
-	background-color: red;
-	border-radius: 50%;
-	opacity: 0.0;
+h3{
+	font-size: 2.5em;
 }
-
-footer div a{
-	position: relative;
-	top:15px;
+h3{
+	font-size: 2em;
 }
-
-/*------------Golbal header   ------------------------------------------------------------------------------------------**/
-/*------------Golbal header   ------------------------------------------------------------------------------------------**/
-/*------------Golbal header   ------------------------------------------------------------------------------------------**/
-/*------------Golbal header   ------------------------------------------------------------------------------------------**/
-
-header{
-	opacity: 0.75;
-	position:fixed;
-	width: 100%;
-	margin-left: 0;
-	margin-right: 0;
-	z-index: 1;
-	top: 0px;
+p,a{
+	font-size: 1em;
 }
-header div{
-	height: 100px;
-	background-color: black;
-}
-
-header h1{
-	padding-left:20px;
-	float: left;
-	margin-bottom: 0;
-}
-header ul{
-	margin-left: 0px;
-	padding-left: 0;
-
-}
-header ul li{
-	display:inline;
-	padding-right: 10px; 
-}
-
-header hr {
-  height: 4px;
-  margin: 0px 0;
-  background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0, 0, 0, 0)), color-stop(0.5, #333333), to(rgba(0, 0, 0, 0)));
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
-  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
-  background: -o-linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
-  background: linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
-  border: 0;
-}
-hr:after {
-  display: block;
-  content: '';
-  height: 30px;
-  background-image: -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 116, color-stop(0%, #cccccc), color-stop(100%, rgba(255, 255, 255, 0)));
-  background-image: -webkit-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
-  background-image: -moz-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
-  background-image: -o-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
-  background-image: radial-gradient(farthest-side at center top, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
-}
-nav{
-	margin-top: 20px;
-	float:right;
-}
-nav a:link{
-	text-decoration:none;
-	color:white;
-}
-nav a:visited{
-	text-decoration:none;
-	color:white;
-}
-nav a:hover{
-	color: red;
-	font-weight: bold;
-}
-
-
-
-
-
-
-/**----------------Sections ------------------------------------------------------*/
-/**----------------Sections ------------------------------------------------------*/
-/**----------------Sections ------------------------------------------------------*/
-/**----------------Sections ------------------------------------------------------*/
-
-
-
-
-.container{
-	background-color: black;
-	border-radius: 25px;
-	opacity: 0.68;
-}
-
-
-
-.clearcontainer img{
-	width:100%;
-  	max-width:100px;
-}
-
-
-
-.measide{
-	float: left;
-	width:50%;
-}
-.container.floatingct{
-	float: left;
-	width: 50%;
-}
-
-.box{
-	width:50%;
-	float: left;
-}
-
-.imageRow{
-	padding-bottom: 50px;
-	padding-top: 50px;
-	width:50%;
-	margin:auto;
-}
-.imageRow img{
-	max-height: 100px;
-	float: left;
-}
-
-.tutoringsection td, th {
-    border: 1px solid white;
-    text-align: left;
-    padding: 8px;
-}
-
-
-/*slide show-----------------------*/
-.slideshowcontainer{
-	margin: auto;
-	width: 100%;
-	height: 100%;
-}
-.slideshowfooter {
-	margin: auto;
-	width: 70%;
-	height: 100%;
-}
-
-
-.backArrow, .forwardArrow, .slideshowtext{
-	float: left;
-}
-
-.forwardArrow, .backArrow {
-	width: 10%;
-	margin-right: 0px;
-
-}
-
-.pointer{
-	height: 40px;
-	width: 40px;
-	background-color: red;
-	border-radius: 50%;
-	opacity: 0.75;
-	font-size: 17px;
-}
-.pointer p{
-	padding-top: 10px;
-	padding-left: 0px;
-	padding-right: 0px;
-	margin: 0px;
-	text-align: center;
-	font-weight: bold;
-}
-
-.slideshowtext{
-	width:73%;
-	text-align: center;
-}
-
-.slideshowtext p{
-	padding: 0px;
-	text-align: center;
-}
-
-
-#mepic{
-	
-  	max-width:375px;
-  	max-height: 300px;
-}
-/* ------ ID specific css ----------------------------------------------------------------------------------------------------------  */
-/* ------ ID specific css ----------------------------------------------------------------------------------------------------------  */
-/* ------ ID specific css ----------------------------------------------------------------------------------------------------------  */
-/* ------ ID specific css ----------------------------------------------------------------------------------------------------------  */
-
-#intpic{
-	width:100%;
-  	max-width:275px;
-}
-
-
-#meintpicsec{
-	float: right;
-	width: 40%;
-}
-#intpictext{
-	font-size: 12px;
-	margin-left: 12px;
-	margin-right: 12px;
-}
-#meintoverview{
-	margin-top: 100px;
-	float: right;
-	width: 60%;
-}
-
-
-#galoispic{
-	width:100%;
-  	max-width:275px;
-}
-
-#resumepic{
-	width:100%;
-  	max-width:500px;
-}
-
-#aboutmesection{
-	padding-top: 200px;
-	height: 500px;
-}
-#interestssection{
-	height: 2500px;
-}
-#interestssection a{
-	color: white;
+/*links*/
+a{
 	text-decoration: none;
-}	
-
-
-
-#tutoringsection{
-	height: 1000px
-} 
-#resumesection{
-	height: 1000px
-} 
-#downloadsection{
-	height: 1000px;
 }
-
-#metext{
-	text-align: center;
+a:hover{
+	font-weight: bold;
+	color: red;
+}
+img{
+	max-height: 500px;
+}
+/*table + lists*/
+ul li{	
+	list-style-type: none;
 }

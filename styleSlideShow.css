@@ -1,0 +1,50 @@
+.slideshowcontainer{
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	text-align: center; /*center the image*/
+}
+
+.slideshowfooter {
+	margin: auto;
+	width: 70%;
+	height: 100px;
+}
+
+
+.backArrow, .forwardArrow, .slideshowtext{
+	float: left;
+}
+
+.forwardArrow, .backArrow {
+	width: 10%;
+	margin-right: 0px;
+
+}
+
+.pointer{
+	height: 40px;
+	width: 40px;
+	background-color: red;
+	border-radius: 50%;
+	opacity: 0.75;
+	font-size: 17px;
+}
+.pointer p{
+	padding-top: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: 0px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.slideshowtext{
+	width:80%;
+	text-align: center;
+}
+
+.slideshowtext p{
+	padding: 0px;
+	text-align: center;
+}
