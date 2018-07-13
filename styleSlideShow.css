@@ -8,7 +8,11 @@
 .slideshowfooter {
 	margin: auto;
 	width: 70%;
-	height: 100px;
+	height: 57px;
+	background: black;
+	border-radius: 25px;
+	opacity: 0.85;
+	padding: 3%;
 }
 
 

@@ -28,6 +28,11 @@ footer ul{
 	opacity: 0.3;
 	text-align: right;
 }
+footer ul li{
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow: 0px 0px 10px black;
+}
 
 /*------------Golbal header   ------------------------------------------------------------------------------------------**/
 /*------------Golbal header   ------------------------------------------------------------------------------------------**/
@@ -76,14 +81,19 @@ header a{
 .txtcontainer{
 	background-color: black;
 	border-radius: 25px;
-	opacity: 0.68;
+	opacity: 0.8;
 	padding: 3%;
+	text-shadow: 0px 0px 10px black;
 }
 /*honorable mentions for math story*/
 .box{
-	width: 50%;
+	width: 42%;
 	float: left;
 	text-align: center;
+	background: black;
+	border-radius: 25px;
+	opacity: 0.85;
+	margin: 3%;
 }
 .box img{
 	max-height: 350px;
@@ -144,6 +154,11 @@ header a{
 	float: left;
 	width: 50%;
 }
+#mepic{
+	height: 400px;
+	width: auto;
+	image-orientation: from-image;
+}
 #aboutmesection .txtcontainer{
 	width: 44%;
 	float: left;
@@ -167,7 +182,7 @@ header a{
 	margin-bottom: 50px;
 }
 #inttop{
-	height: 750px;
+	height: 820px;
 }
 /*tutoring*/
 #tutoringsection table{

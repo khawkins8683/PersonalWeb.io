@@ -65,7 +65,7 @@ window.addEventListener('scroll', function(){
             break;
         case ((current > prjTop)&&(tutTop > current)):
             setTextByID(24, ["navProjects"] );
-            setTextByID(17, ["navAboutMe","navResume","navDownloads"] );        
+            setTextByID(17, ["navAboutMe","navTutoring","navResume","navDownloads"] );        
             break;
         case ((current > tutTop)&&(resTop > current)):
             setTextByID(24, ["navTutoring"] );
@@ -109,7 +109,7 @@ function newSlideShow(imageID, fileList,captionList){
             return slideShowCont.getElementsByClassName('backArrow')[0];
         },        
         imageFrame: function(){
-            self.getImageElement().style.border = "3px solid white"; 
+            self.getImageElement().style.border = "3px solid black"; 
         },
         removeImageFrame: function(){
             self.getImageElement().style.border = "none"; 
@@ -210,7 +210,7 @@ function newSlideShow(imageID, fileList,captionList){
     return self;
 }
 
-var picMeList = [
+/*var picMeList = [
     "me.jpg",
     "meBackFlip.jpg",
     "meTree.jpg",
@@ -227,11 +227,23 @@ var picMeText=[
     "Me surviving!",
     "Me Arizonaing!",
     "Me in High School!"
+];*/
+var picMeList = [
+    "meredwoods.png",
+    "kejt.png",
+    "kkcol.png",
+    "meGraduate.jpg"
+];
+var picMeText=[
+    "Hanging out with the giants in California",
+    "Joshua Tree National Park with my buddy Brown Eric",
+    "St. Marry's Glacier with my girlfriend",
+    "Me surviving!"
 ];
 
 var mePicSlideShow = newSlideShow('mepic', picMeList, picMeText);
 
-var picIntList = [
+/*var picIntList = [
     "meIntSki.png",
     "meIntBackFlip.jpg",
     "meIntPaint.jpg",
@@ -242,6 +254,19 @@ var picIntText=[
     "Trampolines were my childhood. This was a bouncy one at a carnival in Italy.",
     "I like to paint.  When I studied abroad in Itally I took Art:275 (water colors)",
     "Climbing is one of the best things to do in Tucson.  When it is hot, we climb at a cooler 9,000 ft elevation at the top of Mt. Lemmon"
+];*/
+var picIntList = [
+    "pregrack.png",
+    "grack.png",
+    "yosemitefalls.png",
+    "slothwall.png",
+    "jtclimb.png"
 ];
-
+var picIntText = [
+    "Getting ready for 'The Grack' (3 pitch 5.6, Yosemite CA), a great introduction to the valley",
+    "Nearing the top of pitch 2 on the grack",
+    "Getting mist blasted by Yosemite Falls",
+    "Passing the crux move on sloth wall (5.7 Yesemite CA)",
+    "Finishing a weird but fun friction climb (Bumpy 5.7+ Josua Tree NP, CA)"
+];
 var intPicSlideShow = newSlideShow('intpic', picIntList, picIntText);

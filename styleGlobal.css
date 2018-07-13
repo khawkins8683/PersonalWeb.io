@@ -6,7 +6,7 @@ body {
 
 	background-image: url("./Images/background.jpg");
 	background-attachment: fixed; 
-	background-position: center center;
+	background-position: 50% 43%;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -22,7 +22,14 @@ body {
 	padding: 0;
 }
 /*text*/
-h1, h2, h3 {	text-align: center; }
+h1{	
+	text-align: center;
+	text-shadow: 4px 2px black;
+ }
+ h2, h3 {	
+	text-align: center;
+	text-shadow: 2px 1px black;
+ }
 
 h1{
 	font-size: 3em;
