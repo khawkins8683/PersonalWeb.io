@@ -9,9 +9,38 @@ function btnOpacityOff(){
     document.getElementById("contactinfo").style.opacity = "0.3";
 }
 
+//Build the Projects Section
+function addProject(linkName, directoryName ){
+    //Create a div and add it into the projects section
+    //put hyperlink to new webpage inside of the div
+    var prjCont = document.getElementById('projectList');
+    console.log(prjCont);
+    var item = document.createElement("LI");
+    var link = document.createElement("A");
+    link.innerHTML = linkName;
+    link.setAttribute("href","./"+directoryName+"/index.html");
+    item.appendChild(link);
+    prjCont.appendChild(item);
+
+    //now set the height
+    var prjSection = document.getElementById('projectssection');
+    var curHeight = prjSection.offsetHeight;
+    console.log(prjSection,curHeight);
+    prjSection.style.height = curHeight + 50 + "px";
+    console.log(prjSection.offsetHeight);
+}
+addProject( "- Water Color Painting >>", "ImageStack");
+addProject( "- Take the Newton Quizz! >>", "Math Quizz");
+
 // get the starting height value for each section
 var offSetMove= -200;
 var abtTop = document.getElementById("aboutmesection").offsetTop + offSetMove;
+var prjTop = document.getElementById("projectssection").offsetTop + offSetMove;
+///*section sizing*/
+// #aboutmesection{
+//     padding-top: 200px;
+//     height: 550px;
+// }
 var tutTop =  document.getElementById("tutoringsection").offsetTop + offSetMove;
 var resTop =  document.getElementById("resumesection").offsetTop + offSetMove;
 var downTop =  document.getElementById("downloadsection").offsetTop + offSetMove;
@@ -30,25 +59,26 @@ window.addEventListener('scroll', function(){
 
     //add class to nav item if scroll bar is in each section
     switch(true){
-        case ((current > 0)&&(tutTop > current)):
+        case ((current > 0)&&(prjTop > current)):
             setTextByID(24, ["navAboutMe"] );
-            setTextByID(17, ["navTutoring","navResume","navDownloads"] );
+            setTextByID(17, ["navTutoring","navProjects","navResume","navDownloads"] );
             break;
-
+        case ((current > prjTop)&&(tutTop > current)):
+            setTextByID(24, ["navProjects"] );
+            setTextByID(17, ["navAboutMe","navResume","navDownloads"] );        
+            break;
         case ((current > tutTop)&&(resTop > current)):
             setTextByID(24, ["navTutoring"] );
-            setTextByID(17, ["navAboutMe","navResume","navDownloads"] );        
+            setTextByID(17, ["navAboutMe","navProjects","navResume","navDownloads"] );        
             break; 
-
         case  ((current > resTop)&&(downTop > current)):   
             setTextByID(24, ["navResume"] );
-            setTextByID(17, ["navAboutMe","navTutoring","navDownloads"] );
+            setTextByID(17, ["navAboutMe","navProjects","navTutoring","navDownloads"] );
             document.getElementById("navResume").style.fontSize = "24px";
             break; 
-
         case (current > downTop):
             setTextByID(24, ["navDownloads"] );
-            setTextByID(17, ["navAboutMe","navTutoring","navResume"] );
+            setTextByID(17, ["navAboutMe","navProjects","navTutoring","navResume"] );
             break;           
     }
 }); 

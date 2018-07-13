@@ -1,0 +1,17 @@
+.quizcontainer{
+	background: black;
+	color: white;
+}
+h1,h3 {
+	padding: 15px;
+}
+button {
+    background-color: #4CAF50; /* Green */
+    border: solid black 2px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
