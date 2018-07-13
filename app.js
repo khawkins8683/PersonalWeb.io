@@ -236,7 +236,7 @@ var picMeList = [
 ];
 var picMeText=[
     "Hanging out with the giants in California",
-    "Joshua Tree National Park with my buddy Brown Eric",
+    "Joshua Tree National Park with my buddy Eric Brown",
     "St. Marry's Glacier with my girlfriend",
     "Me surviving!"
 ];
