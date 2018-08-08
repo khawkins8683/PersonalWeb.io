@@ -32,6 +32,7 @@ function addProject(linkName, directoryName ){
 addProject( "- Water Color Painting >>", "ImageStack");
 addProject( "- Take the Newton Quizz! >>", "Math Quizz");
 addProject( "- Play Kings Cup (nsfw)! >>", "KingsCup2.0");
+addProject( "- Prime factoring (not fully optimized)! >>","Prime");
 // get the starting height value for each section
 var offSetMove= -200;
 var abtTop = document.getElementById("aboutmesection").offsetTop + offSetMove;
