@@ -1,0 +1,76 @@
+header{
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(to bottom right,black, violet, black);
+	vertical-align: middle;
+
+	position: fixed;
+	top: 20px;
+}
+
+header h1{
+	font-size: 45px;
+	color: white;
+	text-shadow: 2px 0px 4px blue;
+	width: 100%;
+	margin: 0;
+
+	text-align: center;
+	line-height: 100px;
+}
+
+
+
+
+body{
+	background-image: url("./Images/background.png");
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+.topfill{
+	width: 100%;
+	height: 150px;
+}
+.container{
+	
+	width: 960px;
+	border: solid black 2px;
+	margin: auto;
+	margin-top: -20px;
+
+    background: white;
+    height: 500px;
+    /*This should be set by js*/
+    margin-bottom: 30px;
+    overflow-y: scroll;
+}
+#whitebord{
+	position: relative;
+	padding: 20px;
+	overflow-wrap: break-word;
+}
+
+button{
+	position: absolute;
+	bottom: 75px;
+	margin-left: 75px;
+}
+
+#stepnum{
+	position: absolute;
+}
+
+@media only screen and (max-width: 960px){
+	body{
+		background: white;
+		margin: 10px;
+	}
+	.container{
+		width: 100%;
+		margin: 0;
+	}
+}
