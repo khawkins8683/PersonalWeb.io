@@ -76,9 +76,9 @@ function PrimeListCounter(n){
 			number = numList[i];		
 		}
 		primeList.push(currentPrime);
-		primetag.text("Found " + primeList.length + " primes bellow " + n + " so far");
+		primetag.text("Found " + primeList.length + " primes below " + n + " so far");
 	}	
-	primetag.text( "Found a total of " + primeList.length + " primes bellow " + n);
+	primetag.text( "Found a total of " + primeList.length + " primes below " + n);
 	return primeList;
 }
 
