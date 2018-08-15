@@ -39,10 +39,11 @@ $('#primelist').keyup( function (e) {
 	//check for enter key
 	if (e.keyCode == 13) {
 		//calculate prime list
+		//$(this).parent().children('p').remove();
 		let num = $(this).val();
 		let pList = PrimeListCounter(num);
 		//display result bellow
-		$(this).parent().children('p').remove();
+		$(this).parent().children('p:last').remove();
 		$(this).parent().append('<p>'+ pList +'</p>');
 		//save result to a file
 		let blob = new Blob([pList], {type: "text/plain;charset=utf-8"});
