@@ -1,0 +1,40 @@
+#board{
+	position: relative;
+	width: 640px;
+	height: 640px;
+	border: solid black 2px;
+}
+.row{
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 80px;
+	width: 100%;
+}
+.slot{
+	margin: 0;
+	padding: 0;
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+}
+.light{
+	background-color: white;
+}
+.dark{
+	background-color: #57575b;
+}
+.piece{
+	position: absolute;
+	top: 280px;/*  center is the width 640/2 - 640/8/2 (half width of piece)  */
+	left: 280px;
+	height: 80px;
+	width: 80px;
+	margin: 0;
+	padding: 0;
+}
+
+
+.highLight{
+	background: red;
+}
