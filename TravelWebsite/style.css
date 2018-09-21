@@ -1,0 +1,198 @@
+
+/*GLOBAL----------------------------------------------------*/
+body{
+	padding: 0;
+	margin: 0;
+	background-image: url('./Images/clouds.jpg');
+	background-size: cover;
+	background-attachment:  fixed;
+}
+#container{
+	width: 960px;
+	margin: auto;
+	margin-top: 100px;
+}
+path{
+	stroke-width:0.97063118000000004;
+}
+/*Header---------------------------------------------------*/
+header{
+	background: black;
+	border: solid white 2px;
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	color: white;
+	top: 0px;
+}
+#pagetitle{
+	display: inline;
+	width: 50%;
+}
+ header .pin1{
+ 	height: 90%;
+ 	fill: white;
+ 	float: left;
+ 	fill-opacity: 1;
+ 	margin-top: 5px;
+ }
+ header h1{
+ 	line-height: 100px;
+ 	vertical-align: center;
+ 	padding: 0;
+ 	margin: 0;
+ 	margin-left: 40px;
+ 	display: inline;/* needed so that h1 does not take entire title  */
+ }
+#linkcontainer{
+ 	float: right;
+ 	display: inline;
+ 	margin-right: 40px;
+ }
+#linkcontainer ul{
+	margin: 0;
+}
+#linkcontainer li{
+ 	display: inline;
+ 	padding-left: 10px;
+ }
+ #linkcontainer a{
+ 	text-decoration: none;
+ 	color: white;
+ 	font-weight: bold;
+ 	font-size: 25px;
+ 	line-height: 100px;
+ }
+ #linkcontainer a:hover{
+ 	color: red;
+ }
+
+
+
+
+/*USA MAP--------------------------------------------------*/
+#svgusa{
+	fill-opacity: 0.5;
+	position: relative;
+	overflow: visible;/*make sure we can still see zoomed in graphics */
+}
+/*World MAP--------------------------------------------------*/
+#svgworld{
+	fill-opacity: 0.5;
+	position: relative;
+	overflow: visible;/*make sure we can still see zoomed in graphics */
+}
+/*PINS-----------------------------------------------*/
+.natpark{
+	fill: green;
+	fill-opacity: 1;
+}
+/*Popou Screen----------------------------------------*/
+#pinscreenusa, #pinscreenworld{
+	/*might want to set these with js*/
+	height: 577px;
+	width: 960px; 
+	margin-top: 60px; 
+	background: rgba(0, 0, 0, 0.5); 
+	position: absolute; 
+	top: 0px;
+
+	overflow-y: scroll;
+	text-align: center;
+
+	display: none;
+}
+/*exit button*/
+.exitbutton{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 40px;
+	fill: red;
+	fill-opacity:0.5;
+}
+
+.pintitle{
+	font-size: 35px;
+	font-weight: bold;
+	text-shadow: 0 0 3px white;
+}
+.pintitle text{
+	padding-bottom: 3px;
+}
+.pintitle p{
+	font-size: 14px;
+}
+
+.blog{
+	background-image: url('./Images/paper.svg');
+	background-color: #ffffb3;
+	width: 640px;
+    background-size : 640px auto;
+    margin: auto;
+
+    border-radius: 10px;
+
+}
+.blog p{
+	line-height: 32px;
+	font-family: cursive; 
+	font-style: italic;
+	
+	vertical-align: bottom;
+	padding-left: 42px;
+	padding-top: 37px;
+
+	text-align: left;
+}
+
+
+
+/*Slide Show-----------------------------*/
+.slideshowcont{
+	/*border: solid black 2px;*/
+	margin-top: -330px;
+	height: 500px;
+	position: relative;
+}
+.commentcont{
+	width: 40%;
+	background-color: rgba(0,0,0,0.5);
+
+	color: white;
+	text-shadow: 0 0 3px black;
+
+	border-radius: 10px;
+	margin-left: 30%;
+
+	position: absolute;
+	bottom: 0px; 
+}
+.commentcont p{
+	padding: 7px;
+}
+
+
+.slideshowcont img{
+	height: 100%;
+	margin: auto;
+}
+/*next button*/
+.nextbutton, .prebutton{
+	height: 50px;
+	position: absolute;	
+	top: 50%;
+	stroke-linejoin: round; 
+
+	stroke-width: 20;
+	stroke: black;
+	fill: white;
+	fill-opacity:0.75;
+}
+.nextbutton{
+	left: 70%;
+}
+.prebutton{
+	left: calc(30% - 50px);
+	transform: rotate(180deg);
+}

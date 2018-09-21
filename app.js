@@ -29,11 +29,12 @@ function addProject(linkName, directoryName ){
     prjSection.style.height = curHeight + 50 + "px";
     console.log(prjSection.offsetHeight);
 }
+addProject( "- My Travel Bolg >>","TravelWebsite");
 addProject( "- Water Color Painting >>", "ImageStack");
 addProject( "- Take the Newton Quizz! >>", "Math Quizz");
-addProject( "- Play Kings Cup (nsfw)! >>", "KingsCup2.0");
+//addProject( "- Play Kings Cup (nsfw)! >>", "KingsCup2.0");
 addProject( "- Prime factoring (not fully optimized)! >>","Prime");
-addProject( "- other website templates >>","Sam");
+//addProject( "- other website templates >>","Sam");
 
 // get the starting height value for each section
 var offSetMove= -200;

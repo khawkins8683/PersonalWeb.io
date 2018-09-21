@@ -102,7 +102,7 @@ function King(color){
 }
 applyPrototype(Piece, King);
 //redefine the active slots method
-King.prototype.possibleMoves = function(gameMap){
+King.prototype.possibleMoves = function(gameMap, newTurn ){
 	let slotList = [];
 	//file
 	slotList = slotList.concat( this.moveDirection( [0,1], gameMap, 1 ) );
@@ -116,10 +116,57 @@ King.prototype.possibleMoves = function(gameMap){
 	slotList = slotList.concat( this.moveDirection( [-1,-1], gameMap,1 ) );
 	slotList = slotList.concat( this.moveDirection( [-1,1], gameMap, 1) );
 
-	//check for castling
-	//no pieces between rook and king
-	//both king and rook have castleQ = true;	
+	if(this.castleQ){
+		console.log('possible castle');
+		let kingLocation = this.currentLocation;
+		let rookLocations = [];
+		let middleSlotList = [];
+		let movePositions = [];
+		let king = this;
+		let rook = {};
+		let slotdiv = {};
+		if(this.color === 'light'){
+			rookLocations = ['a_1','h_1'];
+			middleSlotList = [['b_1','c_1','d_1'],['f_1','g_1']];
+			movePositions = [ ['c_1','d_1'] , ['g_1','f_1'] ];//king, rook
+		}else if(this.color === 'dark'){
+			rookLocations = ['a_8','h_8'];
+			middleSlotList = [['b_8','c_8','d_8'],['f_8','g_8']];
+			movePositions = [ ['c_8','d_8'] , ['g_8','f_8'] ];
+		}
+		for(let i = 0; i<rookLocations.length; i++){
+			//check corner for a rook
+			if( gameMap[rookLocations[i]] instanceof Rook ){
+				rook = gameMap[rookLocations[i]];
+				//if there is a rook in corner check move status
+				if(rook.castleQ){
+					//if rook hasn't been moved check for any blocking pieces
+					if(EmptyLocations(middleSlotList[i], gameMap)){
+						slotdiv = $('#' + movePositions[i][0] );
+						console.log('castle postion for king ', movePositions[i][0], slotdiv);
+						slotdiv.addClass('chighligth');
+						let rookID = rook.id;
+						slotdiv.on('click',function(){
+							board.move( king.id , movePositions[i][0] );//move king
+							board.move( rookID , movePositions[i][1] );//move rook
+							newTurn.call();//call the new turn function
+							slotdiv.removeClass('chighligth');
+						});
+					}
+				}
+			}
+		}
+	}
 	return slotList;	
+}
+
+function EmptyLocations(slotList,gameMap){
+	let testList = [];
+	for(let i=0; i<slotList.length; i++){
+		//console.log(slotList[i],gameMap);
+		if(slotList[i] in gameMap){return false;}
+	}
+	return true;
 }
 
 function Queen(color){
@@ -372,22 +419,20 @@ let aniTime = 1000;//animation time for moves
 
 function Board(){
 
-	
-	let pieceList = ['pawn1','pawn2','pawn3','pawn4','pawn5','pawn6','pawn7','pawn8','bishop1','knight1','rook1','bishop2','knight2','rook2','king','queen'];
+	let self = this;
 	let fileList = ['a','b','c','d','e','f','g','h'];
 	let pList = ['rook1','knight1','bishop1','queen','king','bishop2','knight2','rook2'];
-	
-	let self = this;
 
 	self.slots = {};//this is the link to the slot objects
-	for(let i = 0; i<slotObjs.length; i++){
-		self.slots[ slotObjs[i].id  ] = slotObjs[i];
-	}
+		for(let i = 0; i<slotObjs.length; i++){
+			self.slots[ slotObjs[i].id  ] = slotObjs[i];
+		}
 
 	self.pieces = {};//this is the link to the piece objects
-	for(let i = 0; i<pieceObjs.length; i++){
-		self.pieces[ pieceObjs[i].id  ] = pieceObjs[i];
-	}
+		for(let i = 0; i<pieceObjs.length; i++){
+			self.pieces[ pieceObjs[i].id  ] = pieceObjs[i];
+		}
+
 	self.pieceList = function(color){
 
 		let outPut = [];
@@ -411,10 +456,12 @@ function Board(){
 		return map;
 	}
 	//move a piece to a slot
-	self.move = function(pieceID,slotID){
+	self.move = function(pieceID,slotID,playerMove=true){//playermove is option to see if we should flag castling
 		//get the piece + slot obj
 		let p = self.pieces[pieceID];
 		let s = self.slots[slotID];
+		//check piece type to tip castle flag
+		if( (p instanceof King || p instanceof Rook)&&playerMove ){p.castleQ = false;}
 		//this is the only parameter we need
 		p.currentLocation = slotID;//set new piece location
 		//physically move the piece
@@ -426,10 +473,10 @@ function Board(){
 	//move all pieces to starting locations
 	self.startPositions = function(){
 		for(let i=1; i<=8; i++){
-			self.move( 'light_'+'pawn'+i , fileList[i-1]+'_' + 2  );
-			self.move( 'dark_'+'pawn'+i , fileList[i-1]+'_' + 7  );
-			self.move( 'light_' + pList[i-1] , fileList[i-1]+'_' + 1  );
-			self.move( 'dark_' + pList[i-1] , fileList[i-1]+'_'+ 8  );
+			self.move( 'light_'+'pawn'+i , fileList[i-1]+'_' + 2 , false );//false => non player move
+			self.move( 'dark_'+'pawn'+i , fileList[i-1]+'_' + 7, false  );
+			self.move( 'light_' + pList[i-1] , fileList[i-1]+'_' + 1, false  );
+			self.move( 'dark_' + pList[i-1] , fileList[i-1]+'_'+ 8 , false  );
 		}
 	};
 };
@@ -450,6 +497,19 @@ function Game(board){
 		board.startPositions();
 		self.addPieceClick(turn);
 	};
+	//start a new turn
+	self.newTurn = function(){//set new click events + switch color
+		self.removePieceClick('light');
+		self.removePieceClick('dark');
+		self.removeSlotClick();
+		if(turn==='light'){//switch color
+			turn = 'dark'
+		}else{
+			turn = 'light'
+		}
+		//add click events to the pieces for next turn
+		self.addPieceClick(turn);
+	};	
 	self.removeSlotClick = function(){
 		for(i in board.slots){
 			board.slots[i].div.off('click');
@@ -471,7 +531,7 @@ function Game(board){
 			let pieceObj = pieceList[i];
 			pieceObj.div.on('click',function(){
 				self.removeSlotClick();//first remove all previous slot click evenets and highlights
-				let moveSlotList = pieceObj.possibleMoves( board.gameMap() );
+				let moveSlotList = pieceObj.possibleMoves( board.gameMap(), self.newTurn );//new turn passed for castling
 				let slot = {};
 				for(let j = 0; j<moveSlotList.length; j++){
 					slot = board.slots[moveSlotList[j]];
@@ -496,19 +556,7 @@ function Game(board){
 			});//end of piece click event
 		}//end of for loop for adding piece click events
 	};				
-	//start a new turn
-	self.newTurn = function(){//set new click events + switch color
-		self.removePieceClick('light');
-		self.removePieceClick('dark');
-		self.removeSlotClick();
-		if(turn==='light'){//switch color
-			turn = 'dark'
-		}else{
-			turn = 'light'
-		}
-		//add click events to the pieces for next turn
-		self.addPieceClick(turn);
-	};	
+
 }	
 //--------------------------------------------------------------------------------------------------------------
 //---------------------------------------
