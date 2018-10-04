@@ -2,8 +2,8 @@
 //Add event listeners to all states/countirees
 //add all event listeners to pins
 //creates all html for pins
-function Map(svgID, pinObjs, pinScreenObj){
 
+function Map(svgID, pinObjs, pinScreenObj){
 	//start a new map 
 	this.init = function(){
 		this.cacheDOM();
@@ -12,19 +12,26 @@ function Map(svgID, pinObjs, pinScreenObj){
 		for(let i in pinObjs){
 			this.makePinHTML( pinObjs[i] );
 		}
+		this.cahce$elements();
 		this.cachePins();
 		this.bindEvents();
 	};
-
 	//interface with the DOM i.e. get all nodes
 	this.cacheDOM = function(){
-		let cont = document.getElementById(svgID);
-		//let elements = cont.getElementsByTagName('path');
-		this.$container = cont;
+		this.$container = document.getElementById(svgID);
 		//select all paths that are not
+		this.cahce$elements();
+	};
+	this.cachePins = function(){
+		let cont = document.getElementById(svgID);
+		this.$pins = cont.querySelectorAll('.pin');//get all pins
+	}
+	this.cacheElement = function(id){
+		this.$element = document.getElementById(id);
+	};
+	this.cahce$elements = function(){
 		this.$elements = []; 
-		let paths = cont.querySelectorAll('path, g');////states and or countries on map
-		//console.log('paths', paths, elements);
+		let paths = this.$container.querySelectorAll('path, g');////states and or countries on map
 		for(let ii=0;  ii<paths.length; ii++){
 			let c = paths[ii].getAttribute('class');
 			if(c){
@@ -38,39 +45,64 @@ function Map(svgID, pinObjs, pinScreenObj){
 			}
 		}
 	};
-	this.cachePins = function(){
-		let cont = document.getElementById(svgID);
-		this.$pins = cont.querySelectorAll('.pin');//get all pins
-	}
-	this.cacheElement = function(id){
-		this.$element = document.getElementById(id);
-	};
-
 	//event listeners---------
 	this.bindEvents = function(){
-		console.log('binding events to: ', this.$pins);
 		//bind events to elements (states countires)
 		this.$elements.forEach(function(node){
 			//set mouse over for all items
-			node.addEventListener('mouseenter', this.magnify2X.bind(this) );
-			node.addEventListener('mouseleave', this.removeMagnify );
-
-			node.addEventListener('mouseenter', this.addFillOpacity);
-			node.addEventListener('mouseenter', this.showTop );
-			node.addEventListener('mouseleave', this.removeFillOpacity );
+			this.bind$element(node);
 		}.bind(this));
 		//bind evenets to pins
 		this.$pins.forEach(function(node){
 			//set mouse over for all items
 			node.addEventListener('mouseenter', this.magnifyPin.bind(this) );
 			node.addEventListener('mouseleave', this.removeMagnifyPin.bind(this) );
+			//pin name
+			node.addEventListener('mouseenter', this.showPinName.bind(this) );
+			node.addEventListener('mouseleave', this.removePinName.bind(this) );
+			
 			node.addEventListener('click',function(e){
-				console.log('registered Click on pin ',e.target.id );
 				pinScreenObj.init( pinObjs[e.target.id] );/*initiate a new pinScreen*/
 			});
 		}.bind(this));
 	};
-	//Callback functions (events)
+	this.bind$element = function(node){
+		node.addEventListener('mouseenter', this.magnify2X.bind(this) );
+		node.addEventListener('mouseleave', this.removeMagnify );
+
+		node.addEventListener('mouseenter', this.addFillOpacity);
+		node.addEventListener('mouseenter', this.showTop );
+
+		node.addEventListener('mouseleave', this.removeFillOpacity );
+	};
+
+	//Callback functions (events) ----------------- ----------- ------ ----
+	//Callback functions (events) ----------------- ----------- ------ ---
+	//Callback functions (events) ----------------- ----------- ------ ---
+	//Callback functions (events) ----------------- ----------- ------ ---
+	//Callback functions (events) ----------------- ----------- ------ ---
+
+	let nameTagType = 'H3';
+	this.showPinName = function(event){
+		let $pin = event.target;
+		let pinObj = pinObjs[ $pin.id ];
+		let parent = this.$container.parentNode;// can I put an h1 in a g tag?
+		let $name = document.createElement(nameTagType);
+
+		$name.innerHTML = pinObj.name;
+		//position just to right of pin
+		//TODO add in scroll + margin offset
+		$name.style.position = 'absolute';
+		$name.style.top = $pin.getBoundingClientRect().top + 'px';
+		$name.style.left = (35 + $pin.getBoundingClientRect().left) + 'px';
+
+		parent.append($name);
+	};
+	this.removePinName = function(event){
+		let parent = this.$container.parentNode;
+		let h3 = parent.querySelector(nameTagType);
+		h3.remove();
+	};
 	this.showTop = function(event){
 		//move child to end of parent svg
 		let child = event.target;
@@ -84,17 +116,21 @@ function Map(svgID, pinObjs, pinScreenObj){
 		event.target.style.fillOpacity = 0.5;
 	};
 	this.removeMagnify = function(event){
+		console.log('removing magnify state: ',event.target.id);
 		event.target.style.transform = '';
 	};
 	this.magnify2X = function(event){
+		console.log('magnifying state: ',event.target.id);
 		this.magnifySVGElement(  event.target,2,2);//need to bind this to eventHandler
 	};
 	this.removeMagnifyPin = function(event){
 		let pinObj = pinObjs[ event.target.id ];
+		console.log('removing magnify pin ',pinObj.id);
 		event.target.style.transform =  this.placePinMatrix(pinObj,1,1);
 	};
 	this.magnifyPin = function(event){
 		let pinObj = pinObjs[ event.target.id ];
+		console.log('Magnifing Pin ',pinObj.id);
 		event.target.style.transform =  this.placePinMatrix(pinObj,1.5,1.5); 
 	};
 	this.magnifySVGElement = function(pathNode,scaleX,scaleY){
@@ -126,15 +162,16 @@ function Map(svgID, pinObjs, pinScreenObj){
 			node.style.fill = color;
 		});
 	}; 
-	//this make pins
 	this.placePinMatrix = function(pinObj,scaleX=1,scaleY=1){
 		let loc = pinObj.pinPixelLocation();
 		let centerX = ((scaleX*(11.52))-(11.52) )/(1);
 		let centerY = ((scaleY*(23.04))-(23.04) )/2;
 		let trans  = 'matrix('+ scaleX +','+ '0,0,' + scaleY + ',' + (loc.x - centerX) + ',' + (loc.y - centerY) +')';//  - scaleY*(23.04/2)
-	
+		console.log('setting pin ',[scaleX,scaleY],pinObj.id,' to location',(loc.x - centerX),(loc.y - centerY));
 		return trans;
 	};
+	//here we should check to see if there is a <g>
+	//if no <g> we need to make one
 	this.makePinHTML = function(pinObj){
 		let pin = document.createElementNS( pinObj.svg.nameSpace , pinObj.svg.nodeType );
 		let at = pinObj.svg.attributes;
@@ -145,7 +182,24 @@ function Map(svgID, pinObjs, pinScreenObj){
 		pin.style.transform = this.placePinMatrix(pinObj);
 		//now add it in to the respective state
 		this.cacheElement(pinObj.parentId);
-		this.$element.append(pin);
+		//now run nestPin
+		this.nestPin(pin);
 	};
 
+	this.nestPin = function($pin){
+		if( this.$element.tagName.toUpperCase() === 'PATH' ){
+			//create a <g> tage
+			let g = document.createElementNS('http://www.w3.org/2000/svg','g');
+			//set g to previous id/class type
+			let id = this.$element.getAttribute('id');
+			g.setAttribute('class', this.$element.getAttribute('class') );
+			g.setAttribute('id', id );
+			this.$element.setAttribute('id', id + '_Path');
+			this.$element.setAttribute('class','group');
+			g.append(this.$element);
+			this.$container.append(g);
+			this.$element = g;
+		}
+		this.$element.append($pin);
+	};
 }	

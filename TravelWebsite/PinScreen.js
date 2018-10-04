@@ -4,19 +4,16 @@
 function PinScreen(nodeID){
 //Localized variables ---------------------------------------
 	let slideShowImageID = 0;
-
 //Main Functions ----------------------------------------------
 //Main Functions ----------------------------------------------
 //Main Functions ----------------------------------------------
 //Main Functions ----------------------------------------------
 //Main Functions ----------------------------------------------
-
 //  Initialize screen | cacheDOM data | set evenetHandlers
 	this.init = function(pinObj){
-
+		slideShowImageID = 0;
 		//get DOM references
 		this.cacheDOM();
-
 		//set up html nodes to new pin data
 		//set bannar
 		this.setBannar(pinObj);
@@ -27,7 +24,6 @@ function PinScreen(nodeID){
 		this.makeSlideShowTxtNodes(pinObj.screenData.activityComments);
 		//set blog
 		this.$blog.innerHTML = pinObj.screenData.blog;
-
 		//now that we have set up the slide show we need to recache
 		this.cacheDOM();
 		this.nextImage();
@@ -38,6 +34,7 @@ function PinScreen(nodeID){
 	};
 
 	this.cacheDOM = function(){
+		//this.$body = document.querySelector('#container');//trying to add click outside of box closes
 		//Misc
 		let cont = document.getElementById(nodeID);
 		this.$container = cont;
@@ -61,6 +58,7 @@ function PinScreen(nodeID){
 	};
 
 	this.bindEvents = function(){
+		//this.$body.addEventListener('click', this.close.bind(this)  );
 		//pin screen scrolling
 		this.$container.addEventListener('scroll', this.stayAtTop.bind(this) );
 		//exit button
@@ -92,9 +90,6 @@ function PinScreen(nodeID){
 		this.$slideShowPre.addEventListener('click', this.preImage.bind(this));
 	};
 
-
-
-
 //Event Handlers  --------------------------------------------------------
 //Event Handlers  --------------------------------------------------------
 //Event Handlers  --------------------------------------------------------
@@ -102,7 +97,6 @@ function PinScreen(nodeID){
 //Event Handlers  --------------------------------------------------------
 	this.stayAtTop = function(e){
 		let top = e.target.scrollTop;
-		console.log('shiftting: ' , this.$exitbutton );
 		this.$exitbutton.style.top =  (top + 10) +'px';
 	}
 	this.addBorder = function(e){
@@ -121,7 +115,6 @@ function PinScreen(nodeID){
 		e.target.parentNode.style.backgroundColor = 'rgba(0,0,0,1.0)';
 	};
 	this.removeHighLightBkgOpacity = function(e){
-		console.log('removing bck highlight');
 		e.target.parentNode.style.backgroundColor = 'rgba(0,0,0,0.5)';
 	};
 	this.nextImage = function(e){
@@ -168,12 +161,15 @@ function PinScreen(nodeID){
 //Rendering Functions ------------------------------------------------------
 //Rendering Functions ------------------------------------------------------
 
-
 //Show -- manipulare display
 	//main screen
 	this.render = function(){
 		// need to position the screen properly
-		this.$container.style.top = (this.$container.parentNode.offsetTop - (130)) +'px';
+		let topMargin = 130;
+		this.$container.style.top = (this.$container.parentNode.offsetTop - topMargin) + 'px';
+		//set screen height
+		let h = window.outerHeight;
+		this.$container.style.height = (h-1*topMargin) + 'px';
 		this.$container.style.display ='block';
 	};
 	this.close = function(){

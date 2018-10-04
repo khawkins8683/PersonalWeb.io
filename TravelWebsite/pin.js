@@ -9,7 +9,7 @@ function applyPrototype(parent,child){
 //Pin Object prototype
 //to be used with svg map 
 //--------------
-function Pin(name, type, lat ,long, mainImage ,blog ,images=[], imageCaptions=[]){
+function Pin(pinBook, name, type, lat ,long, mainImage ,blog ,images=[], imageCaptions=[]){
 	//identification
 	this.id = name.split(' ').join('_');
 	this.name = name;//title for the pin
@@ -38,6 +38,9 @@ function Pin(name, type, lat ,long, mainImage ,blog ,images=[], imageCaptions=[]
 			'd':"M18 6c0-3.314-2.687-6-6-6s-6 2.686-6 6c0 2.972 2.164 5.433 5 5.91v12.09l2-2v-10.09c2.836-.477 5-2.938 5-5.91zm-8.66-1.159c-.53-.467-.516-1.372.034-2.023.548-.65 1.422-.799 1.952-.333s.515 1.372-.033 2.021c-.549.652-1.423.801-1.953.335z"
 		}
 	}
+	//add this pin to a pin book
+
+	pinBook[ this.id ] = this;
 }
 //different for world pin vs us Pin
 Pin.prototype.pinPixelLocation = function() {
@@ -72,9 +75,9 @@ function linearFit(st1, st2,type){
 	return {'m':m, 'b':b}
 }
 ///USA --- constructor function------------------------------------------------------------------------------------
-function PinUsa(name, state, type, lat ,long, mainImage ,blog ,images=[], imageCaptions=[]){
+function PinUsa(pinBook, name, state, type, lat ,long, mainImage ,blog ,images=[], imageCaptions=[]){
 	//point this to a new instance of the pin object
-	Pin.call(this, name, type, lat ,long, mainImage ,blog ,images, imageCaptions);
+	Pin.call(this, pinBook, name, type, lat ,long, mainImage ,blog ,images, imageCaptions);
 	this.parentId = state;
 }
 //Polymorphism --------------------------------
@@ -107,9 +110,9 @@ PinUsa.prototype.pinPixelLocation = function(){
 //------------------------------------------------  ----
 //------------------------------------------------  ----
 
-function PinWorld(name, country, type, lat ,long, mainImage ,blog ,images=[], imageCaptions=[]){
+function PinWorld(pinBook, name, country, type, lat ,long, mainImage ,blog ,images=[], imageCaptions=[]){
 	//point this to a new instance of the pin object
-	Pin.call(this, name, type, lat ,long, mainImage ,blog ,images, imageCaptions);
+	Pin.call(this, pinBook ,name, type, lat ,long, mainImage ,blog ,images, imageCaptions);
 	this.parentId = country;
 }
 //Polymorphism --------------------------------
@@ -126,13 +129,6 @@ PinWorld.prototype.pinPixelLocation = function(){
 	let y = countryRect.y - (0/2)*countryRect.height;// - (1/2)*pinRect.height;
 	let scrollTop= window.pageYOffset || document.documentElement.scrollTop;
 	let marginOffsetY = document.getElementById('container').offsetTop;
-
-
-	console.log('placing: ',this.id, {'x':x , 'y':y} );
-	console.log('placing with offsets: ',this.id, {
-		'x': (x - marginOffsetX + scrollLeft) , 
-		'y':(y - marginOffsetY + scrollTop)
-	} );
 	return {
 		'x': (x - marginOffsetX + scrollLeft) , 
 		'y':(y - marginOffsetY + scrollTop)

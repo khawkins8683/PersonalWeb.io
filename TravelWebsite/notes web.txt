@@ -1,0 +1,8 @@
+Add in <g> grouping ---- done -- slick
+Add in pin name when hovered -- done 
+
+Add a map key
+Add in some more dope pins
+Add in trip connections
+Add in ajax to fill the USA bkg
+Add event to the body => if click close the pinscreens
