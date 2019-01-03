@@ -175,7 +175,7 @@ addClickEvent(musicObj );
 
 //programming
 let compObj = new CreateImageObj(
-    'Compiuters',
+    'Computers',
     'Rather unfortunately, up until my senior year of high school, I was not a fan of computers.  I thought they were borring and only consisted of email and microsoft excell.  Then I audited an astronomy class and actually used a computer to analyze some spectral data.  I realized then how powerful a tool a computer is and how many interesting things you can do with them.  Since then I have always used them for modeling and web disgin, in school, professionally, and on my own time.',
     'comp.jpg');
 addClickEvent(compObj );
