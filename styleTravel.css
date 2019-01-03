@@ -1,0 +1,135 @@
+/*USA MAP--------------------------------------------------*/
+#svgusa{
+	fill-opacity: 0.5;
+	position: relative;
+	overflow: visible;/*make sure we can still see zoomed in graphics */
+}
+/*PINS-----------------------------------------------*/
+.natpark{
+	fill: green;
+	fill-opacity: 1;
+}
+.underrated{
+	fill: rgb(155, 29, 155);
+	fill-opacity: 1;
+}
+.home{
+	fill: rgb(32, 64, 241);
+	fill-opacity: 1;
+}
+.city{
+	fill: rgba(0,0,0);
+	fill-opacity: 1.0;
+}
+/*Popou Screen----------------------------------------*/
+#pinscreenusa, #pinscreenworld{
+	/*might want to set these with js*/
+	width: 960px; 
+	margin-top: 60px; 
+	background: rgba(0, 0, 0, 0.5); 
+	position: absolute; 
+	top: 0px;
+
+	overflow-y: scroll;
+	text-align: center;
+
+	display: none;
+}
+/*exit button*/
+.exitbutton{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 40px;
+	fill: red;
+	fill-opacity:0.5;
+}
+
+.pintitle{
+	font-size: 35px;
+	font-weight: bold;
+	text-shadow: 0 0 3px black;
+	width: 720px;
+}
+.pintitle text{
+	fill: white;
+	padding-bottom: 3px;
+}
+.pintitle p{
+	font-size: 14px;
+}
+
+.blog{
+	background-image: url('./Images/paper.svg');
+	background-color: #ffffb3;
+	width: 640px;
+    background-size : 640px auto;
+    margin: auto;
+
+    border-radius: 10px;
+
+}
+.blog p{
+	line-height: 32px;
+	font-family: cursive; 
+	font-style: italic;
+	
+	vertical-align: bottom;
+	padding-left: 42px;
+	padding-top: 37px;
+
+	text-align: left;
+}
+
+
+
+/*Slide Show-----------------------------*/
+.slideshowcont{
+	/*border: solid black 2px;*/
+	margin-top: -480px;
+	height: 500px;
+	position: relative;
+}
+.commentcont{
+	width: 40%;
+	background-color: rgba(0,0,0,0.5);
+
+	color: white;
+	text-shadow: 0 0 3px black;
+
+	border-radius: 10px;
+	margin-left: 30%;
+
+	position: absolute;
+	bottom: 0px; 
+}
+.commentcont p{
+	padding: 7px;
+}
+
+
+.slideshowcont img{
+	height: 100%;
+	margin: auto;
+}
+/*next button*/
+.nextbutton, .prebutton{
+	height: 50px;
+	position: absolute;	
+	top: 50%;
+	stroke-linejoin: round; 
+
+	stroke-width: 20;
+	stroke: black;
+	fill: white;
+	fill-opacity:0.75;
+}
+.nextbutton{
+	left: 70%;
+}
+.prebutton{
+	left: calc(30% - 50px);
+	transform: rotate(180deg);
+}
+
+

@@ -4,10 +4,10 @@ body {
 
 	font-size: 100%;
 
-	background-image: url("./Images/background.jpg");
+	background-image: url("./Images/labkg.jpg");
 	background-attachment: fixed; 
-	background-position: 50% 43%;
-	background-size: cover;
+	/* background-position: 20% 43%; */
+	background-size: cover cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -21,8 +21,18 @@ body {
 	margin: 0;
 	padding: 0;
 }
+ul li{	
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	font-weight: bold;
+	color: red;
+}
 /*text*/
-h1{	
+/* h1{	
 	text-align: center;
 	text-shadow: 4px 2px black;
  }
@@ -43,7 +53,7 @@ h3{
 p,a{
 	font-size: 1em;
 }
-/*links*/
+
 a{
 	text-decoration: none;
 }
@@ -54,7 +64,5 @@ a:hover{
 img{
 	max-height: 500px;
 }
-/*table + lists*/
-ul li{	
-	list-style-type: none;
-}
+
+ */

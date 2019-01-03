@@ -1,0 +1,46 @@
+TODO:
+
+link picture for the about me section
+
+r1
+	About me
+	back flip
+	climb
+	math 
+	painting
+	
+
+
+r2
+	math history
+	traveling
+	skiing
+	boulder colorado
+
+r3	
+	optics
+	records/music
+	computer programming
+	solowiej
+	Tucson
+
+
+
+odeas
+	chess
+	hiking
+	family
+	soccer
+	sequaro/plants
+	astonomy
+
+	
+
+Issue with the pin placement - width 
+Issue with the pin name placement
+	
+
+link code for the travel map
+add link to projects for chess and prime numbers
+add links to download for resume
+improve the footer
