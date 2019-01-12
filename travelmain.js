@@ -3,7 +3,7 @@
 (function(){
 	
 	let main = {
-
+		
 		makeUSAPins: function(){ 
 			this.pinBookUSA = {};//everytime new Pin is called the object is added to the pinBook
 			this.pinBookWorld = {};
@@ -51,15 +51,6 @@
 			);
 			//olympic penn
 			new PinUsa(this.pinBookUSA,'Olympic National Park','WA','natpark',47.8021-2, -123.6044+3,'bannar.jpg',
-				'Olympic National Park was my favorite destination along my west coast road trip.  The diversity is mind blowing, you have rugged mountains that, roll into the temporate rainforest that they create, before crashing into an furrowed rocky coast line.  I will be going back to this magical place!',
-				['backflip.jpg'],
-				[
-					'Is there a more majestic backflip location in the world?! I think not!'
-				]
-			);
-			//seattle
-				//olympic penn
-			new PinUsa(this.pinBookUSA,'Maine National Park','ME','natpark',45.2021+2.4, -69.5-1,'bannar.jpg',
 				'Olympic National Park was my favorite destination along my west coast road trip.  The diversity is mind blowing, you have rugged mountains that, roll into the temporate rainforest that they create, before crashing into an furrowed rocky coast line.  I will be going back to this magical place!',
 				['backflip.jpg'],
 				[
