@@ -21,9 +21,9 @@ body {
 	margin: 0;
 	padding: 0;
 }
-ul li{	
+/* ul li{	
 	list-style-type: none;
-}
+} */
 a{
 	text-decoration: none;
 }
@@ -31,38 +31,3 @@ a:hover{
 	font-weight: bold;
 	color: red;
 }
-/*text*/
-/* h1{	
-	text-align: center;
-	text-shadow: 4px 2px black;
- }
- h2, h3 {	
-	text-align: center;
-	text-shadow: 2px 1px black;
- }
-
-h1{
-	font-size: 3em;
-}
-h3{
-	font-size: 2.5em;
-}
-h3{
-	font-size: 2em;
-}
-p,a{
-	font-size: 1em;
-}
-
-a{
-	text-decoration: none;
-}
-a:hover{
-	font-weight: bold;
-	color: red;
-}
-img{
-	max-height: 500px;
-}
-
- */
