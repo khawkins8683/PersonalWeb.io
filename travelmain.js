@@ -35,8 +35,32 @@
 				['cobbrock.jpg','sealrock.jpg'],
 				['Looking up a 5.7 crack at cobb rock.  Classic accessible boulder rock climbing!','Seal rock, you really just want a couple ropes for the repel, which is the real adventure, the climb is a pretty pedestrian 5.4.']
 			);
+			//Phoenix/Mcdowells
+			new PinUsa(this.pinBookUSA,'McDowell\'s Phoenix','AZ','underrated',	36.0-2.0, -113.2705-3.5,'mcdowells.jpg',
+				'The McDowell Mountains are nestled just north east of Phoenix and have some of the best trad climbing in the area.  It is a beautiful stretch of desert, with both Saguaros, common to the Sonoran desert, and Desert Oaks, Common to the Mojave Desert.  After moving from Tucson to Tempe, discovering this area made me feel a lot better about my new location.',
+				['hanging_gardens.jpg','pitch1.jpg','pitch2.jpg','rap.jpg'],
+				[
+					'Hanging Gardens (5.6, 250 ft), starts bellow he trangular cut-out, and runs along the cracks all the way up the center of the wall.',
+					'Getting started! placing my first piece of pro on pitch 1 of Hanging Gardens',
+					'Following a wonderful finger crack on pitch 2 of Hanging Gardens',
+					'That\'s a rap (pun intended)! Heading home!'
+				]
+			);
+			//Superstitions
+			//LA
 			//Tucson
-			//West Coast trip
+			new PinUsa(this.pinBookUSA,'Tucson','AZ','home',	36.0-3.0, -112.0-3.5,'tucson.jpg',
+				'I moved to Tucson AZ, from Boulder CO, in 2012 to attend the University of Arizona.  Since then, it has always felt like a second home for me.  I love the endless sunshine, relaxed vibes, and gigantic mountains.  Seriously though, they are under-rated.  Mt Lemmon, the closest giant, has a prominence over 5,000 ft.  The climate is much different in the desert when your close to a mile up.  Instead of seguaros and sand, you have trees and even creeks!  If you don\'t have enough time to dive up the west coast, just drive the 28 miles up Mount. Lemmon instead.  You will get just about the same climatic change. ',
+				['lemmon_nora_katie.jpg','lemon_jeremy.jpg','rincons1.jpg','rincons2.jpg','rincons3.jpg','windypoint.jpg'],
+				[
+					'Hangin out on Lemmon with my two favorite girls, Katie and Nora!',
+					'My buddy Jeremy getting beat by a knarly 5.11+.  You can tell his bellayer is getting bored, not a great sign.',
+					'Backpacking in the Rincons.  Mile 1 - seguaros - normal sonoran desert stuff!',
+					'Backpacking in the Rincons. Mile 7 - things are looking different now. More grasses and shrub plants.',
+					'Backpacking int the Rincons. Mile 12 - at the top now, 5,000 feet higher than the desert floor - big trees and even ferns!'
+				]
+			);
+
 			//redwood
 			new PinUsa(this.pinBookUSA,'Redwood National Park','CA','natpark',41.2132, -124.0046-3.4,'bannar.jpg',
 				'redwood national park is the best! There are no entrence fees, and once you are in the park, you are transported to a nigh prehistoric place.  Giants older than Jesus erupt from the earth each desprately trying to reach further into the sunlight.',
@@ -52,9 +76,17 @@
 			//olympic penn
 			new PinUsa(this.pinBookUSA,'Olympic National Park','WA','natpark',47.8021-2, -123.6044+3,'bannar.jpg',
 				'Olympic National Park was my favorite destination along my west coast road trip.  The diversity is mind blowing, you have rugged mountains that, roll into the temporate rainforest that they create, before crashing into an furrowed rocky coast line.  I will be going back to this magical place!',
-				['backflip.jpg'],
+				['backflip.jpg','hoh.jpg','hoh2.jpg','white.jpg','brown.jpg','olympic_sunset.jpg','olypic_coast.jpg','cave.jpg','treebridge.jpg'],
 				[
-					'Is there a more majestic backflip location in the world?! I think not!'
+					'Is there a more majestic backflip location in the world?! I think not!',
+					'The Hoh Rainforest. It is teeming with green, dripping with moss, and absolutely unworldly.  Definitely swing by if you are ever in Washinton State.',
+					'More Hoh!',
+					'This is how my buddy Eric drinks a beer.',
+					'This is how my other buddy Eric drinks a beer.',
+					'The sun setting behind some of many rock outcroppings along the coast.',
+					'The Olypic Coast at low tide',
+					'My buddy Eric majesting in a sea cave',
+					'This tree has no idea whats going on.'
 				]
 			);
 		},

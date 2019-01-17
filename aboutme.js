@@ -128,7 +128,7 @@ let mathObj =new CreateImageObj(
 addClickEvent( mathObj );
 
 let paintObj = new CreateImageObj(
-    'Paihting',
+    'Painting',
     'After my freshman year, I took a study abroad trip to Italy.  I had always liked art, so I decided to take a water color class there.  Since then I have always enjoyed making watercolor painting, pen drawing hybrids. This is one that was inspired by Tucson (obviously).',
     'paint.jpg');
 addClickEvent( paintObj );
@@ -155,14 +155,14 @@ addClickEvent( skiObj );
 
 let boulderObj = new CreateImageObj(
     'Boulder CO',
-    'I was born and raised in Boulder Colorado.  It is a great place to be a kid.  Boulder had everything, mountains, rock, creeks, snow and friends.  Two things from Boulder rubbed off on me, a general interest in things like climbing, biking and backpacking, and a curiosity and respect for science.',
+    'I was born and raised in Boulder Colorado.  It is a great place to be a kid.  Boulder had everything, mountains, rock, creeks, snow and friends.  Two things from Boulder rubbed off on me, a love for things like climbing and backpacking, and a curiosity for science.',
     'boulder.jpg');
 addClickEvent( boulderObj );
 
 //Row 3---------------------------------
 let optObj = new CreateImageObj(
     'Optics',
-    'One of my first encounters with optics, was reading about the Keck Observatory in Hawaii.  The astronomy was what first drew me to the keck, but the more I learned about the instrument, its precision, its size, the more intrestetd I became.  So, in my freshman year I decided to major in optical engineering and then had the pleasure of working on and seeing some pretty cool optical systems after graduation.',
+    'The astronomy was what first drew me to the keck, but the more I learned about the instrument, its precision, its size, the more intrestetd I became.  So, I decided to major in optical engineering and then had the pleasure of working on some pretty cool optical systems after graduation.',
     'keck.jpg');
 addClickEvent( optObj );
 
