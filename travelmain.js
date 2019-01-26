@@ -31,7 +31,7 @@
 			);
 			//Boulder
 			new PinUsa(this.pinBookUSA,'Boulder','CO','home',	40.0-2.0, -105.2705-3.5,'bannar.jpg',
-				'There is no way around it, I was blessed to grow up in Boulder Colorado.  It is a great town with beautiful views at every glance, and a great scietific community.  Unfortunately the town is loosing its appeal.  It is becoming evermore upscale and is loosing its roots.  It is no longer a place for dirty hippies that just want to live life and experience the Colorado Rockies.  Instead it is dominated by multimillionares who complain about tall buildings that block their views of the flatirons because they are too disenfranchised to climb the damn things themselves.  It is overrrated by every measure, this is why I am happy staying in AZ.  Tucson has the same beaty for 1/2 the price and 1/3 the pretention.',
+				'There is no way around it, I was blessed to grow up in Boulder Colorado.  It is a great town with beautiful views at every glance, and a has a scietific community.  However, Boulder, like all places, is changing.  It is becoming more and more up scale, but it is still a home to great rock climbing and offeres access to just about every out door sport.',
 				['cobbrock.jpg','sealrock.jpg'],
 				['Looking up a 5.7 crack at cobb rock.  Classic accessible boulder rock climbing!','Seal rock, you really just want a couple ropes for the repel, which is the real adventure, the climb is a pretty pedestrian 5.4.']
 			);

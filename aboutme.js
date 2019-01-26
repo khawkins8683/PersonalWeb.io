@@ -123,7 +123,7 @@ addClickEvent( climbObj );
 
 let mathObj =new CreateImageObj(
     'Math',
-    'As a kid, reading and writing was hard for me, so there was always something reasuring about arithmatic.  The more I learned about math the more mistified and curious I became until I couldnt bear the idea of my math education ending, so I added it as a major.  I love the rigor and abstract cleaverness used in proofs.  One of my favorite little proofs is outlined (not proven) here in the image section. It shows how to prove that the square root of 2 is irrational.',
+    'As a kid, reading and writing was hard for me, so there was always something reasuring about arithmatic.  The more I learned about math the more mistified and curious I became until I couldn\'t bear the idea of my math education ending, so I added it as a major.  I love the rigor and abstract cleaverness used in proofs.  One of my favorite little proofs is outlined (not proven) here in the image section. It shows how to prove that the square root of 2 is irrational.',
     'math.png');
 addClickEvent( mathObj );
 
@@ -149,7 +149,7 @@ addClickEvent( travelObj );
 
 let skiObj = new CreateImageObj(
     'Skiing/Snowboarding',
-    'Before I started rock climbing, and more importanly, before I moved to the middle of the desert, skiing was what got me going.  It was the first outdoor sport I fell in love with and had plenty of, speed, air and fun to justify long lift lines.  Since I am from Colorado, I was lucky enogh to have pretty good access to some terrain.  Also I like skiing and snowboarding, no need to pick sides.',
+    'Before I started rock climbing, and more importanly, before I moved to the middle of the desert, skiing was what got me going.  It was the first outdoor sport I fell in love with and had plenty of, speed, air and fun to justify long lift lines.  Since I am from Colorado, I was lucky enough to have pretty good access to some terrain.  Also I like skiing and snowboarding, no need to pick sides.',
     'ski.png');
 addClickEvent( skiObj );
 
@@ -162,21 +162,21 @@ addClickEvent( boulderObj );
 //Row 3---------------------------------
 let optObj = new CreateImageObj(
     'Optics',
-    'The astronomy was what first drew me to the keck, but the more I learned about the instrument, its precision, its size, the more intrestetd I became.  So, I decided to major in optical engineering and then had the pleasure of working on some pretty cool optical systems after graduation.',
+    'Astronomy first drew me to the Keck, but the more I learned about the instrument, its precision, its size, the more intrestetd I became.  So, I decided to major in optical engineering and then had the pleasure of working on some pretty cool optical systems after graduation.',
     'keck.jpg');
 addClickEvent( optObj );
 
 //pink floyd or talking heads pick
 let musicObj = new CreateImageObj(
     'Music',
-    'Like most humans I enjoy music, however, it wasnt until my twenties that I started to like more classic rock n roll.  My two favorite bands are probably the Talking Heads and Pink Floyd.  More recently, I have started a small record collection.',
+    'Like most humans I enjoy music, however, it wasn\'t until my twenties that I started to like more classic rock n roll.  My two favorite bands are probably the Talking Heads and Pink Floyd.  More recently, I have started a small record collection.',
     'disk.png');
 addClickEvent(musicObj );
 
 //programming
 let compObj = new CreateImageObj(
     'Computers',
-    'Rather unfortunately, up until my senior year of high school, I was not a fan of computers.  I thought they were borring and only consisted of email and microsoft excell.  Then I audited an astronomy class and actually used a computer to analyze some spectral data.  I realized then how powerful a tool a computer is and how many interesting things you can do with them.  Since then I have always used them for modeling and web disgin, in school, professionally, and on my own time.',
+    'Rather unfortunately, up until my senior year of high school, I was not a fan of computers.  I thought they were borring and only consisted of email and Microsoft Excel.  Then I audited an astronomy class and actually used a computer to analyze some spectral data.  I realized then how powerful a tool a computer is and how many interesting things you can do with them.  Since then I have always used them for modeling and web desgin, in school, professionally, and on my own time.',
     'comp.jpg');
 addClickEvent(compObj );
 
@@ -190,6 +190,6 @@ addClickEvent(soloObj );
 //Tucson
 let tucsonObj = new CreateImageObj(
     'Tucson AZ',
-    'I moved to Tucson from Boulder Colorado, in 2012.  There is smothing great about the desert, the blue ski, dry heat, bright splashes of color, whaterver it is, it grows on you.  The desert is a very underrated place and I will always love the dark outline of a sequaro awkardly outlined by a bright red sunset.',
+    'I moved to Tucson from Boulder Colorado, in 2012.  There is something great about the desert, the blue ski, dry heat, bright splashes of color, whaterver it is, it grows on you.  The desert is a very underrated place and I will always love the dark outline of a sequaro awkardly outlined by a bright red sunset.',
     'tucson.jpg');
 addClickEvent(tucsonObj );
