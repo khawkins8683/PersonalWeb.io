@@ -47,12 +47,12 @@ function Map(svgID, pinObjs, pinScreenObj){
 	};
 	//event listeners---------
 	this.bindEvents = function(){
-		//bind events to elements (states countires)
+		//bind events to elements (states countries)
 		this.$elements.forEach(function(node){
 			//set mouse over for all items
 			this.bind$element(node);
 		}.bind(this));
-		//bind evenets to pins
+		//bind events to pins
 		this.$pins.forEach(function(node){
 			//set mouse over for all items
 			node.addEventListener('mouseenter', this.magnifyPin.bind(this) );

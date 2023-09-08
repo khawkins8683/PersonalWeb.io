@@ -100,7 +100,7 @@ setResumeEvents();
 //--------------------------------------------------------Row #1--------------------------
 let aboutMeObj = new CreateImageObj(
     'About Me',
-    'Greetings from a radio telescope array at 1300 ft on the top of Manu Kea, Hawaii.  I am an optical engineer and computer programmer.  Click on the pictures bellow to find out more about me.',
+    'Greetings from a radio telescope array at 1300 ft on the top of Mauna Kea, Hawaii.  I am an optical engineer and computer programmer.  Click on the pictures bellow to find out more about me.',
     'kyle.jpg'
 );
 //have slide show start on the about me
@@ -109,8 +109,8 @@ buildImageBlock(aboutMeObj, document.querySelector('img[src="./Images/kyle.jpg"]
 
 
 let backflipObj =new CreateImageObj(
-    'Backflips',
-    'When I was yonger I remeber seeing a soccer player do a backflip after he scored.  I thought that looks cool, and since then I have always been interested in acrobatic things.  So, I learned how to do a couple flips.  I love the feeling of the movements',
+    'Back Flips',
+    'When I was younger I remember seeing a soccer player do a back flip after he scored.  I thought that looks cool, and since then I have always been interested in acrobatic things.  So, I learned how to do a couple flips.  I love the feeling of the movements',
     'backflip.jpg'
 );
 addClickEvent(backflipObj);
@@ -123,7 +123,7 @@ addClickEvent( climbObj );
 
 let mathObj =new CreateImageObj(
     'Math',
-    'As a kid, reading and writing was hard for me, so there was always something reasuring about arithmatic.  The more I learned about math the more mistified and curious I became until I couldn\'t bear the idea of my math education ending, so I added it as a major.  I love the rigor and abstract cleaverness used in proofs.  One of my favorite little proofs is outlined (not proven) here in the image section. It shows how to prove that the square root of 2 is irrational.',
+    'As a kid, reading and writing was hard for me, so there was always something reassuring about arithmetic.  The more I learned about math the more mystified and curious I became until I couldn\'t bear the idea of my math education ending, so I added it as a major.  I love the rigor and abstract cleverness used in proofs.  One of my favorite little proofs is outlined (not proven) here in the image section. It shows how to prove that the square root of 2 is irrational.',
     'math.png');
 addClickEvent( mathObj );
 
@@ -137,19 +137,19 @@ addClickEvent( paintObj );
 //--------------------------------------------------------Row #2
 let mathHistObj = new CreateImageObj(
     'Math History',
-    'In addition to math, I also like math history.  The stories and charecters are all so interesting, and the implications of their work is profound.  Perhaps my favorite sorty is of Evariste Galois.  A french mathematician who lived through the French Revolution, and died in a duel at twenty, but not before developing the foundations of Group Theory.',
+    'In addition to math, I also like math history.  The stories and characters are all so interesting, and the implications of their work is profound.  Perhaps my favorite story is of Evariste Galois.  A french mathematician who lived through the French Revolution, and died in a duel at twenty, but not before developing the foundations of Group Theory.',
     'galois.jpg');
 addClickEvent( mathHistObj );
 
 let travelObj = new CreateImageObj(
     'Traveling',
-    'We live in a beautiful world, and I do my best to see all of it that I can.  One of my favorite trips (depicted in this photo) was a road trip up the west coast with my buddy Eric.  We started in Phoenix Az, headed through Joshua Tree out to L.A. and then made our way through Redwood forests, cities and the Olypic Pennisula to Seattle.',
+    'We live in a beautiful world, and I do my best to see all of it that I can.  One of my favorite trips (depicted in this photo) was a road trip up the west coast with my buddy Eric.  We started in Phoenix Az, headed through Joshua Tree out to L.A. and then made our way through Redwood forests, cities and the Olympic Peninsula to Seattle.',
     'travel.png');
 addClickEvent( travelObj );
 
 let skiObj = new CreateImageObj(
     'Skiing/Snowboarding',
-    'Before I started rock climbing, and more importanly, before I moved to the middle of the desert, skiing was what got me going.  It was the first outdoor sport I fell in love with and had plenty of, speed, air and fun to justify long lift lines.  Since I am from Colorado, I was lucky enough to have pretty good access to some terrain.  Also I like skiing and snowboarding, no need to pick sides.',
+    'Before I started rock climbing, and more importantly, before I moved to the middle of the desert, skiing was what got me going.  It was the first outdoor sport I fell in love with and had plenty of, speed, air and fun to justify long lift lines.  Since I am from Colorado, I was lucky enough to have pretty good access to some terrain.  Also I like skiing and snowboarding, no need to pick sides.',
     'ski.png');
 addClickEvent( skiObj );
 
@@ -162,7 +162,7 @@ addClickEvent( boulderObj );
 //Row 3---------------------------------
 let optObj = new CreateImageObj(
     'Optics',
-    'Astronomy first drew me to the Keck, but the more I learned about the instrument, its precision, its size, the more intrestetd I became.  So, I decided to major in optical engineering and then had the pleasure of working on some pretty cool optical systems after graduation.',
+    'Astronomy first drew me to the Keck, but the more I learned about the instrument, its precision, its size, the more interested I became.  So, I decided to major in optical engineering and then had the pleasure of working on some pretty cool optical systems after graduation.',
     'keck.jpg');
 addClickEvent( optObj );
 
@@ -176,7 +176,7 @@ addClickEvent(musicObj );
 //programming
 let compObj = new CreateImageObj(
     'Computers',
-    'Rather unfortunately, up until my senior year of high school, I was not a fan of computers.  I thought they were borring and only consisted of email and Microsoft Excel.  Then I audited an astronomy class and actually used a computer to analyze some spectral data.  I realized then how powerful a tool a computer is and how many interesting things you can do with them.  Since then I have always used them for modeling and web desgin, in school, professionally, and on my own time.',
+    'Rather unfortunately, up until my senior year of high school, I was not a fan of computers.  I thought they were boring and only consisted of email and Microsoft Excel.  Then I audited an astronomy class and actually used a computer to analyze some spectral data.  I realized then how powerful a tool a computer is and how many interesting things you can do with them.  Since then I have always used them for modeling and web design, in school, professionally, and on my own time.',
     'comp.jpg');
 addClickEvent(compObj );
 
@@ -190,6 +190,6 @@ addClickEvent(soloObj );
 //Tucson
 let tucsonObj = new CreateImageObj(
     'Tucson AZ',
-    'I moved to Tucson from Boulder Colorado, in 2012.  There is something great about the desert, the blue ski, dry heat, bright splashes of color, whaterver it is, it grows on you.  The desert is a very underrated place and I will always love the dark outline of a sequaro awkardly outlined by a bright red sunset.',
+    'I moved to Tucson from Boulder Colorado, in 2012.  There is something great about the desert, the blue ski, dry heat, bright splashes of color, whatever it is, it grows on you.  The desert is a very underrated place and I will always love the dark outline of a Saguaro awkwardly outlined by a bright red sunset.',
     'tucson.jpg');
 addClickEvent(tucsonObj );
