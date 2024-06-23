@@ -40,7 +40,7 @@
 				'The McDowell Mountains are nestled just north east of Phoenix and have some of the best trad climbing in the area.  It is a beautiful stretch of desert, with both Saguaros, common to the Sonoran desert, and Desert Oaks, Common to the Mojave Desert.  After moving from Tucson to Tempe, discovering this area made me feel a lot better about my new location.',
 				['hanging_gardens.jpg','pitch1.jpg','pitch2.jpg','rap.jpg'],
 				[
-					'Hanging Gardens (5.6, 250 ft), starts bellow he trangular cut-out, and runs along the cracks all the way up the center of the wall.',
+					'Hanging Gardens (5.6, 250 ft), starts below he trangular cut-out, and runs along the cracks all the way up the center of the wall.',
 					'Getting started! placing my first piece of pro on pitch 1 of Hanging Gardens',
 					'Following a wonderful finger crack on pitch 2 of Hanging Gardens',
 					'That\'s a rap (pun intended)! Heading home!'
@@ -68,7 +68,7 @@
 				[
 					'on our way down to the tall tree grove',
 					'Tall Trees grove, once home to the tallest know redwood.  All the trees here are over 320ft tall!',
-					'Frens and other trees make there home bellow the redwood canopy.',
+					'Frens and other trees make there home below the redwood canopy.',
 					'Me enjoying a view of tall tree grove from the near by creek. Don\'t let the perspective descieve you the trees are well over 300ft and those bushes infront of them are realy large deciduous trees.',
 					'Eric getting his mind blown'
 				]

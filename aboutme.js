@@ -100,7 +100,7 @@ setResumeEvents();
 //--------------------------------------------------------Row #1--------------------------
 let aboutMeObj = new CreateImageObj(
     'About Me',
-    'Greetings from a radio telescope array at 1300 ft on the top of Mauna Kea, Hawaii.  I am an optical engineer and computer programmer.  Click on the pictures bellow to find out more about me.',
+    'Greetings from a radio telescope array at 1300 ft on the top of Mauna Kea, Hawaii.  I am an optical engineer and computer programmer.  Click on the pictures below to find out more about me.',
     'kyle.jpg'
 );
 //have slide show start on the about me
@@ -110,26 +110,26 @@ buildImageBlock(aboutMeObj, document.querySelector('img[src="./Images/kyle.jpg"]
 
 let backflipObj =new CreateImageObj(
     'Back Flips',
-    'When I was younger I remember seeing a soccer player do a back flip after he scored.  I thought that looks cool, and since then I have always been interested in acrobatic things.  So, I learned how to do a couple flips.  I love the feeling of the movements',
+    'When I was younger, I remember seeing a soccer player do a back flip after he scored.  I thought that "looked cool", and since then I have always been interested in acrobatic things.  So, I learned how to do a couple flips.  I love the feeling of the movements.',
     'backflip.jpg'
 );
 addClickEvent(backflipObj);
 
 let climbObj =new CreateImageObj(
     'Rock Climbing',
-    'In the summer after my sophomore year, my buddy John and I got a rope and some quick draws and gave sport climbing ago.  Since we lived in Tucson, AZ the obvious place to go climbing was Mount Lemmon.  The sport took me to some of the coolest places on the mountain.  Now the sport has taken me to beautiful places like, Yosemite CA, Cochise Stronghold AZ, and Joshua Tree CA.',
+    'In the summer after my sophomore year, my buddy John and I got a rope and some quick draws and gave sport climbing ago.  Since we lived in Tucson, AZ, the obvious place to go climbing was Mount Lemmon.  The sport took me to some of the coolest places on the mountain.  Now the sport has taken me to beautiful places like, Yosemite CA, Cochise Stronghold AZ, and Joshua Tree CA.',
     'climb.png');
 addClickEvent( climbObj );
 
 let mathObj =new CreateImageObj(
     'Math',
-    'As a kid, reading and writing was hard for me, so there was always something reassuring about arithmetic.  The more I learned about math the more mystified and curious I became until I couldn\'t bear the idea of my math education ending, so I added it as a major.  I love the rigor and abstract cleverness used in proofs.  One of my favorite little proofs is outlined (not proven) here in the image section. It shows how to prove that the square root of 2 is irrational.',
+    'As a kid, reading and writing were hard for me, so there was always something reassuring about arithmetic.  The more I learned about math the more mystified and curious I became until I couldn\'t bear the idea of my math education ending, so I added it as a major.  I love the rigor and abstract cleverness used in proofs.  One of my favorite little proofs is outlined (not proven) here in the image section. It shows how to prove that the square root of 2 is irrational.',
     'math.png');
 addClickEvent( mathObj );
 
 let paintObj = new CreateImageObj(
     'Painting',
-    'After my freshman year, I took a study abroad trip to Italy.  I had always liked art, so I decided to take a water color class there.  Since then I have always enjoyed making watercolor painting, pen drawing hybrids. This is one that was inspired by Tucson (obviously).',
+    'After my freshman year, I took a study abroad trip to Italy.  I had always liked art, so I decided to take a watercolor class there.  Since then I have always enjoyed making watercolor painting, and pen and ink hybrids. This is one that was inspired by Tucson (obviously).',
     'paint.jpg');
 addClickEvent( paintObj );
 
@@ -137,32 +137,32 @@ addClickEvent( paintObj );
 //--------------------------------------------------------Row #2
 let mathHistObj = new CreateImageObj(
     'Math History',
-    'In addition to math, I also like math history.  The stories and characters are all so interesting, and the implications of their work is profound.  Perhaps my favorite story is of Evariste Galois.  A french mathematician who lived through the French Revolution, and died in a duel at twenty, but not before developing the foundations of Group Theory.',
+    'In addition to math, I also like math history.  The stories and characters are all so interesting, and the implications of their work is profound.  Perhaps my favorite story is of Evariste Galois.  A French mathematician who lived through the French Revolution, and died in a duel at twenty, but not before developing the foundations of Group Theory.',
     'galois.jpg');
 addClickEvent( mathHistObj );
 
 let travelObj = new CreateImageObj(
     'Traveling',
-    'We live in a beautiful world, and I do my best to see all of it that I can.  One of my favorite trips (depicted in this photo) was a road trip up the west coast with my buddy Eric.  We started in Phoenix Az, headed through Joshua Tree out to L.A. and then made our way through Redwood forests, cities and the Olympic Peninsula to Seattle.',
+    'We live in a beautiful world, and I do my best to see all of it that I can.  One of my favorite trips (depicted in this photo) was a road trip up the west coast with my buddy Eric.  We started in Phoenix, AZ, headed out to L.A. via Joshua Tree and then made our way through redwood forests, cities and the Olympic Peninsula to Seattle.',
     'travel.png');
 addClickEvent( travelObj );
 
 let skiObj = new CreateImageObj(
     'Skiing/Snowboarding',
-    'Before I started rock climbing, and more importantly, before I moved to the middle of the desert, skiing was what got me going.  It was the first outdoor sport I fell in love with and had plenty of, speed, air and fun to justify long lift lines.  Since I am from Colorado, I was lucky enough to have pretty good access to some terrain.  Also I like skiing and snowboarding, no need to pick sides.',
+    'Before I started rock climbing, and more importantly, before I moved to the middle of the desert, skiing was what got me going.  It was the first outdoor sport I fell in love with. Skiing had plenty of speed, air and fun to justify long lift lines.  Since I am from Colorado, I was lucky enough to have pretty good access to excellent terrain.  I also like snowboarding, no need to pick sides.',
     'ski.png');
 addClickEvent( skiObj );
 
 let boulderObj = new CreateImageObj(
     'Boulder CO',
-    'I was born and raised in Boulder Colorado.  It is a great place to be a kid.  Boulder had everything, mountains, rock, creeks, snow and friends.  Two things from Boulder rubbed off on me, a love for things like climbing and backpacking, and a curiosity for science.',
+    'I was born and raised in Boulder Colorado.  It is a great place to be a kid.  Boulder had everything: mountains, rocks, creeks, snow and friends.  Two things from Boulder rubbed off on me - a love for the outdoors and a curiosity for science.',
     'boulder.jpg');
 addClickEvent( boulderObj );
 
 //Row 3---------------------------------
 let optObj = new CreateImageObj(
     'Optics',
-    'Astronomy first drew me to the Keck, but the more I learned about the instrument, its precision, its size, the more interested I became.  So, I decided to major in optical engineering and then had the pleasure of working on some pretty cool optical systems after graduation.',
+    'Astronomy first drew me to the Keck.  The more I learned about the instrument, its precision, its size, the more interested I became in telescopes.  So, I decided to major in optical engineering and have had the pleasure of working on some pretty cool optical systems after graduating.',
     'keck.jpg');
 addClickEvent( optObj );
 
@@ -183,13 +183,13 @@ addClickEvent(compObj );
 //solowiej
 let soloObj = new CreateImageObj(
     'Solowiej',
-    'You may have been wondering where ksolohawk came from.  Well the solo is from my middle name, Solowiej, which is my mothers maiden name.  My mothers side of the family is Polish, and I like carrying around the name as a reminder that most of us here in the USA are immigrants.',
+    'You may have been wondering where "ksolohawk" came from.  Well the "solo" is from my middle name, Solowiej, which is my mother\'s maiden name.  My mother\'s side of the family is Polish. I like carrying around the name as a reminder that most of us here in the USA are immigrants.',
     'solowiej.png');
 addClickEvent(soloObj );
 
 //Tucson
 let tucsonObj = new CreateImageObj(
     'Tucson AZ',
-    'I moved to Tucson from Boulder Colorado, in 2012.  There is something great about the desert, the blue ski, dry heat, bright splashes of color, whatever it is, it grows on you.  The desert is a very underrated place and I will always love the dark outline of a Saguaro awkwardly outlined by a bright red sunset.',
+    'I moved to Tucson from Boulder, CO, in 2012. There is something great about the desert, the blue sky, dry heat, bright splashes of color, whatever it is, it grows on you.  The desert is a very underrated place. I will always love the silhouette of a Saguaro outlined by a bright red sunset.',
     'tucson.jpg');
 addClickEvent(tucsonObj );
